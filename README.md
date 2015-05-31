@@ -84,8 +84,3 @@ In the previous examples, we only defined the size for small screens using "`col
     </div>
 </iron-grid>
 ```
-
-@group Iron Elements
-@element iron-grid
-@demo demo/index.html
-@homepage the5heep.tk
