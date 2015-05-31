@@ -7,7 +7,9 @@
 The following custom proporties are available for styling:
 
 Custom property | Description | Default
+
 -|-|-
+
 `--iron-container-width`|Width of the Container|`90%`
  
 # Iron Grid
