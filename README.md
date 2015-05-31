@@ -20,7 +20,7 @@ Please note that all the examples pictured below have the class 'example' on the
 
 Our standard grid has 12 columns. No matter the size of the browser, each of these columns will always have an equal width.
 
-![1](img/1.png)
+![1](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/1.png)
 
 To get a feel of how the grid is used in HTML. Take a look at this code below which will produce a similar result as the one above.
 
@@ -45,7 +45,7 @@ To get a feel of how the grid is used in HTML. Take a look at this code below wh
 
 To offset, simply add `offset-s2` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number after is the number of columns you want to offset by.
 
-![2](img/2.png)
+![2](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/2.png)
 
 ```html
 <iron-grid>
@@ -71,7 +71,7 @@ Above we showed you how to layout elements using our grid system. Now we'll show
 
 In the previous examples, we only defined the size for small screens using "`col s12`". This is fine if we want a fixed layout since the rules propogate upwards. By just saying s12, we are essentially saying "`col s12 m12 l12`". But by explicitly defining the size we can make our website more responsive.
 
-![3](img/3.png)
+![3](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/3.png)
 
 ```html
 <iron-grid>
