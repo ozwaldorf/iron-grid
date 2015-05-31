@@ -1,0 +1,813 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<script src="../components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+<!--
+# Iron Container
+
+'iron-container' is not strictly part of iron-grid but is important in laying out content. It allows you to center your page content. `iron-container`'s default is set to ~90% of the window width. It helps you center and contain your page content. We use the container to contain our body content.
+
+### Styling
+
+The following custom proporties are available for styling:
+
+Custom property | Description | Default
+-|-|-
+`--iron-container-width`|Width of the Container|`90%`
+ 
+# Iron Grid
+
+`iron-grid` helps you layout your page in an ordered, easy fashion. We are using a standard 12 column fluid responsive grid system.
+
+Please note that all the examples pictured below have the class 'example' on them. The class *is* included in the component. This class gives each grid column a 1px white border so that you can see the seperation.
+
+### 12 Columns
+
+Our standard grid has 12 columns. No matter the size of the browser, each of these columns will always have an equal width.
+
+![1](img/1.png)
+
+To get a feel of how the grid is used in HTML. Take a look at this code below which will produce a similar result as the one above.
+
+```html
+<iron-grid>
+    <div class="s1">1</div>
+    <div class="s1">2</div>
+    <div class="s1">3</div>
+    <div class="s1">4</div>
+    <div class="s1">5</div>
+    <div class="s1">6</div>
+    <div class="s1">7</div>
+    <div class="s1">8</div>
+    <div class="s1">9</div>
+    <div class="s1">10</div>
+    <div class="s1">11</div>
+    <div class="s1">12</div>
+</iron-grid>
+```
+
+### Offsets
+
+To offset, simply add `offset-s2` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number after is the number of columns you want to offset by.
+
+![2](img/2.png)
+
+```html
+<iron-grid>
+    <div class="s12">
+        <span>This div is 12-columns wide on all screen sizes</span>
+    </div>
+    <div class="s6 offset-s6">
+        <span>6-columns (offset-by-6)</span>
+    </div>
+</iron-grid>
+```
+
+### Creating Responsive Layouts
+
+Above we showed you how to layout elements using our grid system. Now we'll show you how to design your layouts so that they look great on all screen sizes.
+
+#### Screen Sizes
+ | Mobile Devices <= 600px | Tablet Devices <= 992px | Desktop Devices >= 922px
+ -|-|-|-
+ Class Prefix | .s | .m | .l
+ Number of Columns | 12 | 12 | 12
+
+### Adding Responsiveness
+
+In the previous examples, we only defined the size for small screens using "`col s12`". This is fine if we want a fixed layout since the rules propogate upwards. By just saying s12, we are essentially saying "`col s12 m12 l12`". But by explicitly defining the size we can make our website more responsive.
+
+![3](img/3.png)
+
+```html
+<iron-grid>
+    <div class="s12">
+        <span>I am always full-width (col s12)</span>
+    </div>
+    <div class="s12 m6">
+        <span>I am full-width on mobile (col s12 m6)</span>
+    </div>
+</iron-grid>
+```
+
+@group Iron Elements
+@element iron-grid
+@demo demo/index.html
+@homepage the5heep.tk
+-->
+<dom-module id="iron-grid">
+    <style>
+        :host {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+        
+        :host:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        ::content .example {
+            border: 1px solid #eee;
+            margin: 7px 0;
+            text-align: center;
+            font-size: 28px;
+            color: white;
+            padding: 0;
+        }
+        
+        ::content .s1 {
+            width: 8.33333%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s2 {
+            width: 16.66667%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s3 {
+            width: 25%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s4 {
+            width: 33.33333%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s5 {
+            width: 41.66667%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s6 {
+            width: 50%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s7 {
+            width: 58.33333%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s8 {
+            width: 66.66667%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s9 {
+            width: 75%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s10 {
+            width: 83.33333%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s11 {
+            width: 91.66667%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .s12 {
+            width: 100%;
+            margin-left: 0;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s1 {
+            margin-left: 8.33333%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s2 {
+            margin-left: 16.66667%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s3 {
+            margin-left: 25%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s4 {
+            margin-left: 33.33333%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s5 {
+            margin-left: 41.66667%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s6 {
+            margin-left: 50%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s7 {
+            margin-left: 58.33333%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s8 {
+            margin-left: 66.66667%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s9 {
+            margin-left: 75%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s10 {
+            margin-left: 83.33333%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s11 {
+            margin-left: 91.66667%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        ::content .offset-s12 {
+            margin-left: 100%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+        }
+        
+        @media only screen and (min-width: 601px) {
+            ::content .m1 {
+                width: 8.33333%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m2 {
+                width: 16.66667%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m3 {
+                width: 25%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m4 {
+                width: 33.33333%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m5 {
+                width: 41.66667%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m6 {
+                width: 50%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m7 {
+                width: 58.33333%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m8 {
+                width: 66.66667%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m9 {
+                width: 75%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m10 {
+                width: 83.33333%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m11 {
+                width: 91.66667%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .m12 {
+                width: 100%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m1 {
+                margin-left: 8.33333%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m2 {
+                margin-left: 16.66667%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m3 {
+                margin-left: 25%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m4 {
+                margin-left: 33.33333%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m5 {
+                margin-left: 41.66667%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m6 {
+                margin-left: 50%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m7 {
+                margin-left: 58.33333%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m8 {
+                margin-left: 66.66667%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m9 {
+                margin-left: 75%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m10 {
+                margin-left: 83.33333%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m11 {
+                margin-left: 91.66667%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-m12 {
+                margin-left: 100%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+        }
+        
+        @media only screen and (min-width: 993px) {
+            ::content .l1 {
+                width: 8.33333%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l2 {
+                width: 16.66667%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l3 {
+                width: 25%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l4 {
+                width: 33.33333%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l5 {
+                width: 41.66667%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l6 {
+                width: 50%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l7 {
+                width: 58.33333%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l8 {
+                width: 66.66667%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l9 {
+                width: 75%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l10 {
+                width: 83.33333%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l11 {
+                width: 91.66667%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .l12 {
+                width: 100%;
+                margin-left: 0;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l1 {
+                margin-left: 8.33333%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l2 {
+                margin-left: 16.66667%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l3 {
+                margin-left: 25%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l4 {
+                margin-left: 33.33333%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l5 {
+                margin-left: 41.66667%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l6 {
+                margin-left: 50%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l7 {
+                margin-left: 58.33333%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l8 {
+                margin-left: 66.66667%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l9 {
+                margin-left: 75%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l10 {
+                margin-left: 83.33333%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l11 {
+                margin-left: 91.66667%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+            ::content .offset-l12 {
+                margin-left: 100%;
+                float: left;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0 0.75rem;
+            }
+        }
+    </style>
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: 'iron-grid',
+    });
+</script>
+
+<!--
+# Iron Container
+
+'iron-container' is not strictly part of iron-grid but is important in laying out content. It allows you to center your page content. `iron-container`'s default is set to ~90% of the window width. It helps you center and contain your page content. We use the container to contain our body content.
+
+### Styling
+
+The following custom proporties are available for styling:
+
+Custom property | Description | Default
+-|-|-
+`--iron-container-width`|Width of the Container|`90%`
+-->
+<dom-module id="iron-grid-container">
+    <style is="custom-style">
+        :host {
+            --iron-container-width: 90%;
+        }
+        
+        .iron-container {
+            padding: 0 1.5rem;
+            margin: 0 auto;
+            max-width: 1280px;
+            width: var(--iron-container-width);
+        }
+        
+        .iron-container::content iron-grid {
+            margin-left: -0.75rem;
+            margin-right: -0.75rem;
+        }
+    </style>
+    <template>
+        <div class="iron-container">
+            <content></content>
+        </div>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: 'iron-grid-container',
+    });
+</script>
