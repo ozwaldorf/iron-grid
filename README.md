@@ -6,9 +6,9 @@
 
 The following custom proporties are available for styling:
 
-Custom property | Description | Default
------------------------- | ---------------------- | -----
-`--iron-container-width` | Width of the Container | `90%`
+| Custom property | Description | Default |
+| ------------------------ | ---------------------- | ----- |
+| `--iron-container-width` | Width of the Container | `90%` |
  
 # Iron Grid
 
@@ -63,10 +63,10 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 Above we showed you how to layout elements using our grid system. Now we'll show you how to design your layouts so that they look great on all screen sizes.
 
 #### Screen Sizes
- --- | Mobile Devices <= 600px | Tablet Devices <= 992px | Desktop Devices >= 922px
- ----------------- | -- | -- | --
- Class Prefix      | .s | .m | .l
- Number of Columns | 12 | 12 | 12
+ |   | Mobile Devices <= 600px | Tablet Devices <= 992px | Desktop Devices >= 922px |
+ | ----------------- | -- | -- | -- |
+ | Class Prefix      | .s | .m | .l |
+ | Number of Columns | 12 | 12 | 12 |
 
 ### Adding Responsiveness
 
