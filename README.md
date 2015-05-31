@@ -7,10 +7,8 @@
 The following custom proporties are available for styling:
 
 Custom property | Description | Default
-
--|-|-
-
-`--iron-container-width`|Width of the Container|`90%`
+------------------------ | ---------------------- | -----
+`--iron-container-width` | Width of the Container | `90%`
  
 # Iron Grid
 
@@ -66,8 +64,8 @@ Above we showed you how to layout elements using our grid system. Now we'll show
 
 #### Screen Sizes
  | Mobile Devices <= 600px | Tablet Devices <= 992px | Desktop Devices >= 922px
- -|-|-|-
- Class Prefix | .s | .m | .l
+ ----------------- | -- | -- | --
+ Class Prefix      | .s | .m | .l
  Number of Columns | 12 | 12 | 12
 
 ### Adding Responsiveness
