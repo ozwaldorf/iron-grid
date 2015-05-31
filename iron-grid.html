@@ -4,15 +4,15 @@
 <!--
 # Iron Container
 
-'iron-container' is not strictly part of iron-grid but is important in laying out content. It allows you to center your page content. `iron-container`'s default is set to ~90% of the window width. It helps you center and contain your page content. We use the container to contain our body content.
+`iron-container` is not strictly part of iron-grid but is important in laying out content. It allows you to center your page content. `iron-container`'s default is set to ~90% of the window width. It helps you center and contain your page content. We use the container to contain our body content.
 
 ### Styling
 
 The following custom proporties are available for styling:
 
-Custom property | Description | Default
--|-|-
-`--iron-container-width`|Width of the Container|`90%`
+| Custom property          | Description            | Default |
+| ------------------------ | ---------------------- | ------- |
+| `--iron-container-width` | Width of the Container | `90%`   |
  
 # Iron Grid
 
@@ -24,7 +24,7 @@ Please note that all the examples pictured below have the class 'example' on the
 
 Our standard grid has 12 columns. No matter the size of the browser, each of these columns will always have an equal width.
 
-![1](img/1.png)
+![1](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/1.png)
 
 To get a feel of how the grid is used in HTML. Take a look at this code below which will produce a similar result as the one above.
 
@@ -49,7 +49,7 @@ To get a feel of how the grid is used in HTML. Take a look at this code below wh
 
 To offset, simply add `offset-s2` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number after is the number of columns you want to offset by.
 
-![2](img/2.png)
+![2](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/2.png)
 
 ```html
 <iron-grid>
@@ -66,17 +66,16 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 
 Above we showed you how to layout elements using our grid system. Now we'll show you how to design your layouts so that they look great on all screen sizes.
 
-#### Screen Sizes
- | Mobile Devices <= 600px | Tablet Devices <= 992px | Desktop Devices >= 922px
- -|-|-|-
- Class Prefix | .s | .m | .l
- Number of Columns | 12 | 12 | 12
+|                       | Mobile Devices <= 600px | Tablet Devices &lt;= 992px | Desktop Devices &gt;= 922px |
+|-----------------------|-------------------------|----------------------------|-----------------------------|
+| **Class Prefix**      | .s                      | .m                         | .l                          |
+| **Number of Columns** | 12                      | 12                         | 12                          |
 
 ### Adding Responsiveness
 
 In the previous examples, we only defined the size for small screens using "`col s12`". This is fine if we want a fixed layout since the rules propogate upwards. By just saying s12, we are essentially saying "`col s12 m12 l12`". But by explicitly defining the size we can make our website more responsive.
 
-![3](img/3.png)
+![3](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/3.png)
 
 ```html
 <iron-grid>
