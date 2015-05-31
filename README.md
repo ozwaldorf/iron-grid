@@ -63,8 +63,8 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 Above we showed you how to layout elements using our grid system. Now we'll show you how to design your layouts so that they look great on all screen sizes.
 
  | Screen Sizes | Mobile Devices <= 600px | Tablet Devices <= 992px | Desktop Devices >= 922px |
- | ----------------- | -- | -- | -- |
- | Class Prefix      | .s | .m | .l |
+ | ------------ | -- | -- | -- |
+ | Class Prefix | .s | .m | .l |
 
 ### Adding Responsiveness
 
