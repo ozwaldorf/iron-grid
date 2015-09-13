@@ -559,7 +559,9 @@ In the previous examples, we only defined the size for small screens using "`col
     }
 
     @media only screen and (min-width: 993px) {
-      ::content .l0 {}
+      ::content .l0 {
+        display: none;
+      }
       ::content .l1 {
         width: 8.33333%;
         margin-left: 0;
@@ -764,7 +766,6 @@ In the previous examples, we only defined the size for small screens using "`col
         box-sizing: border-box;
         padding: 0 0.75rem;
       }
-
     }
   </style>
   <template>
