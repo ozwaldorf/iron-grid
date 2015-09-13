@@ -9,7 +9,7 @@ The following custom proporties are available for styling:
 | Custom property          | Description            | Default |
 | ------------------------ | ---------------------- | ------- |
 | `--iron-container-width` | Width of the Container | `90%`   |
- 
+
 # Iron Grid
 
 `iron-grid` helps you layout your page in an ordered, easy fashion. We are using a standard 12 column fluid responsive grid system.
@@ -54,6 +54,18 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
     </div>
     <div class="s6 offset-s6">
         <span>6-columns (offset-by-6)</span>
+    </div>
+</iron-grid>
+```
+
+### Hiding elements
+
+You can create hidden elements by using "`s0`".
+
+```html
+<iron-grid>
+    <div class="s0 m12">
+        <span>This div is hidden on small screen sizes and 12-columns wide on medium and large screen sizes.</span>
     </div>
 </iron-grid>
 ```
