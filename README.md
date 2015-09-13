@@ -60,7 +60,7 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 
 ### Hiding elements
 
-You can create hidden elements by using "`s0`".
+You can create hidden elements by using `s0`.
 
 ```html
 <iron-grid>
@@ -81,7 +81,7 @@ Above we showed you how to layout elements using our grid system. Now we'll show
 
 ### Adding Responsiveness
 
-In the previous examples, we only defined the size for small screens using "`s12`". This is fine if we want a fixed layout since the rules propogate upwards. By just saying s12, we are essentially saying "`s12 m12 l12`". But by explicitly defining the size we can make our website more responsive.
+In the previous examples, we only defined the size for small screens using `s12`. This is fine if we want a fixed layout since the rules propogate upwards. By just saying s12, we are essentially saying `s12 m12 l12`. But by explicitly defining the size we can make our website more responsive.
 
 ![3](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/3.png)
 
