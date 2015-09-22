@@ -1,7 +1,7 @@
 {
     "name": "iron-grid",
-    "version": "1.4.1",
-    "description": "Materialize.css Grid System for Polymer",
+    "version": "1.4.2",
+    "description": "Responsive Grid System for Polymer",
     "private": false,
     "authors": [
     "The5heepDevelopment"
