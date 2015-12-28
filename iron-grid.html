@@ -12,6 +12,7 @@ The following custom proporties are available for styling:
 | Custom property          | Description            | Default |
 | ------------------------ | ---------------------- | ------- |
 | `--iron-container-width` | Width of the Container | `90%`   |
+| `--iron-grid-element-style` | Permit to override grid style element | `null`   |
 
 # Iron Grid
 
@@ -111,6 +112,17 @@ In the previous examples, we only defined the size for small screens using `s12`
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 20px;
+      
+      --iron-grid-default-style: {
+            margin-left: 0;
+            float: left;
+            display: block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+      };
+      
     }
 
     :host:after {
@@ -134,254 +146,146 @@ In the previous examples, we only defined the size for small screens using `s12`
 
     ::content .s1 {
       width: 8.33333%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s2 {
       width: 16.66667%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s3 {
       width: 25%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s4 {
       width: 33.33333%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s5 {
       width: 41.66667%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s6 {
       width: 50%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+       @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s7 {
       width: 58.33333%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s8 {
       width: 66.66667%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s9 {
       width: 75%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s10 {
       width: 83.33333%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      s box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s11 {
       width: 91.66667%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .s12 {
       width: 100%;
-      margin-left: 0;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s1 {
       margin-left: 8.33333%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s2 {
       margin-left: 16.66667%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s3 {
       margin-left: 25%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s4 {
       margin-left: 33.33333%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s5 {
       margin-left: 41.66667%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s6 {
       margin-left: 50%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s7 {
       margin-left: 58.33333%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s8 {
       margin-left: 66.66667%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s9 {
       margin-left: 75%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s10 {
       margin-left: 83.33333%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s11 {
       margin-left: 91.66667%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     ::content .offset-s12 {
       margin-left: 100%;
-      float: left;
-      display: block;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
+      @apply(--iron-grid-default-style);
+      @apply(--iron-grid-element-style);
     }
 
     @media only screen and (min-width: 601px) {
@@ -390,232 +294,124 @@ In the previous examples, we only defined the size for small screens using `s12`
       }
       ::content .m1 {
         width: 8.33333%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m2 {
         width: 16.66667%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m3 {
         width: 25%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m4 {
         width: 33.33333%;
         margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m5 {
         width: 41.66667%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m6 {
         width: 50%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m7 {
         width: 58.33333%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m8 {
         width: 66.66667%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m9 {
         width: 75%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m10 {
         width: 83.33333%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m11 {
         width: 91.66667%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .m12 {
         width: 100%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m1 {
         margin-left: 8.33333%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m2 {
         margin-left: 16.66667%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m3 {
         margin-left: 25%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m4 {
         margin-left: 33.33333%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m5 {
         margin-left: 41.66667%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m6 {
         margin-left: 50%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m7 {
         margin-left: 58.33333%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m8 {
         margin-left: 66.66667%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m9 {
         margin-left: 75%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m10 {
         margin-left: 83.33333%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m11 {
         margin-left: 91.66667%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-m12 {
         margin-left: 100%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
-        display:
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
     }
 
@@ -625,231 +421,123 @@ In the previous examples, we only defined the size for small screens using `s12`
       }
       ::content .l1 {
         width: 8.33333%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l2 {
         width: 16.66667%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l3 {
         width: 25%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l4 {
         width: 33.33333%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l5 {
         width: 41.66667%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l6 {
         width: 50%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l7 {
         width: 58.33333%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l8 {
         width: 66.66667%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l9 {
         width: 75%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l10 {
         width: 83.33333%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l11 {
         width: 91.66667%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .l12 {
         width: 100%;
-        margin-left: 0;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l1 {
         margin-left: 8.33333%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l2 {
         margin-left: 16.66667%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l3 {
         margin-left: 25%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l4 {
         margin-left: 33.33333%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l5 {
         margin-left: 41.66667%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l6 {
         margin-left: 50%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l7 {
         margin-left: 58.33333%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l8 {
         margin-left: 66.66667%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l9 {
         margin-left: 75%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l10 {
         margin-left: 83.33333%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l11 {
         margin-left: 91.66667%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
       ::content .offset-l12 {
         margin-left: 100%;
-        float: left;
-        display: block;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 0.75rem;
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
       }
     }
   </style>
