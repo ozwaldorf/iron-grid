@@ -9,6 +9,7 @@ The following custom proporties are available for styling:
 | Custom property          | Description            | Default |
 | ------------------------ | ---------------------- | ------- |
 | `--iron-container-width` | Width of the Container | `90%`   |
+| `--iron-grid-element-style` | Permit to override grid style element | `null`   |
 
 # Iron Grid
 
