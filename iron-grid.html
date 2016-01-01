@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-media-query/iron-media-query.html">
 
 <!--
 # Iron Container
@@ -30,18 +31,18 @@ To get a feel of how the grid is used in HTML. Take a look at this code below wh
 
 ```html
 <iron-grid>
-    <div class="s1">1</div>
-    <div class="s1">2</div>
-    <div class="s1">3</div>
-    <div class="s1">4</div>
-    <div class="s1">5</div>
-    <div class="s1">6</div>
-    <div class="s1">7</div>
-    <div class="s1">8</div>
-    <div class="s1">9</div>
-    <div class="s1">10</div>
-    <div class="s1">11</div>
-    <div class="s1">12</div>
+<div class="s1">1</div>
+<div class="s1">2</div>
+<div class="s1">3</div>
+<div class="s1">4</div>
+<div class="s1">5</div>
+<div class="s1">6</div>
+<div class="s1">7</div>
+<div class="s1">8</div>
+<div class="s1">9</div>
+<div class="s1">10</div>
+<div class="s1">11</div>
+<div class="s1">12</div>
 </iron-grid>
 ```
 
@@ -53,12 +54,12 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 
 ```html
 <iron-grid>
-    <div class="s12">
-        <span>This div is 12-columns wide on all screen sizes</span>
-    </div>
-    <div class="s6 offset-s6">
-        <span>6-columns (offset-by-6)</span>
-    </div>
+<div class="s12">
+<span>This div is 12-columns wide on all screen sizes</span>
+</div>
+<div class="s6 offset-s6">
+<span>6-columns (offset-by-6)</span>
+</div>
 </iron-grid>
 ```
 
@@ -68,9 +69,9 @@ You can create hidden elements by using `s0`.
 
 ```html
 <iron-grid>
-    <div class="s0 m12">
-        <span>This div is hidden on small screen sizes and 12-columns wide on medium and large screen sizes.</span>
-    </div>
+<div class="s0 m12">
+<span>This div is hidden on small screen sizes and 12-columns wide on medium and large screen sizes.</span>
+</div>
 </iron-grid>
 ```
 
@@ -91,12 +92,12 @@ In the previous examples, we only defined the size for small screens using `s12`
 
 ```html
 <iron-grid>
-    <div class="s12">
-        <span>I am always full-width (s12)</span>
-    </div>
-    <div class="s12 m6">
-        <span>I am full-width on mobile (s12 m6)</span>
-    </div>
+<div class="s12">
+<span>I am always full-width (s12)</span>
+</div>
+<div class="s12 m6">
+<span>I am full-width on mobile (s12 m6)</span>
+</div>
 </iron-grid>
 ```
 
@@ -107,448 +108,693 @@ In the previous examples, we only defined the size for small screens using `s12`
 @homepage http://the5heep.tk/
 -->
 <dom-module id="iron-grid">
-  <style>
-    :host {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 20px;
-      
-      --iron-grid-default-style: {
-            margin-left: 0;
-            float: left;
-            display: block;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 0 0.75rem;
-      };
-      
-    }
+    <style>
+		:host {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+			--iron-grid-xs1-width: 8.33333%;
+			--iron-grid-xs2-width: 16.66667%;
+			--iron-grid-xs3-width: 25%;
+			--iron-grid-xs4-width: 33.33333%;
+			--iron-grid-xs5-width: 41.66667%;
+			--iron-grid-xs6-width: 50%;
+			--iron-grid-xs7-width: 58.33333%;
+			--iron-grid-xs8-width: 66.66667%;
+			--iron-grid-xs9-width: 75%;
+			--iron-grid-xs10-width: 83.33333%;
+			--iron-grid-xs11-width: 91.66667%;
+			--iron-grid-xs12-width: 100%;
+			--iron-grid-s1-width: 8.33333%;
+			--iron-grid-s2-width: 16.66667%;
+			--iron-grid-s3-width: 25%;
+			--iron-grid-s4-width: 33.33333%;
+			--iron-grid-s5-width: 41.66667%;
+			--iron-grid-s6-width: 50%;
+			--iron-grid-s7-width: 58.33333%;
+			--iron-grid-s8-width: 66.66667%;
+			--iron-grid-s9-width: 75%;
+			--iron-grid-s10-width: 83.33333%;
+			--iron-grid-s11-width: 91.66667%;
+			--iron-grid-s12-width: 100%;
+			--iron-grid-m1-width: 8.33333%;
+			--iron-grid-m2-width: 16.66667%;
+			--iron-grid-m3-width: 25%;
+			--iron-grid-m4-width: 33.33333%;
+			--iron-grid-m5-width: 41.66667%;
+			--iron-grid-m6-width: 50%;
+			--iron-grid-m7-width: 58.33333%;
+			--iron-grid-m8-width: 66.66667%;
+			--iron-grid-m9-width: 75%;
+			--iron-grid-m10-width: 83.33333%;
+			--iron-grid-m11-width: 91.66667%;
+			--iron-grid-m12-width: 100%;
+			--iron-grid-l1-width: 8.33333%;
+			--iron-grid-l2-width: 16.66667%;
+			--iron-grid-l3-width: 25%;
+			--iron-grid-l4-width: 33.33333%;
+			--iron-grid-l5-width: 41.66667%;
+			--iron-grid-l6-width: 50%;
+			--iron-grid-l7-width: 58.33333%;
+			--iron-grid-l8-width: 66.66667%;
+			--iron-grid-l9-width: 75%;
+			--iron-grid-l10-width: 83.33333%;
+			--iron-grid-l11-width: 91.66667%;
+			--iron-grid-l12-width: 100%;
+			--iron-grid-xl1-width: 8.33333%;
+			--iron-grid-xl2-width: 16.66667%;
+			--iron-grid-xl3-width: 25%;
+			--iron-grid-xl4-width: 33.33333%;
+			--iron-grid-xl5-width: 41.66667%;
+			--iron-grid-xl6-width: 50%;
+			--iron-grid-xl7-width: 58.33333%;
+			--iron-grid-xl8-width: 66.66667%;
+			--iron-grid-xl9-width: 75%;
+			--iron-grid-xl10-width: 83.33333%;
+			--iron-grid-xl11-width: 91.66667%;
+			--iron-grid-xl12-width: 100%;
+			--iron-grid-default-style: {
+			margin-left: 0;
+			float: left;
+			display: block;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0 0.75 rem;
+		};
 
-    :host:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+		}
 
-    ::content .example {
-      border: 1px solid #eee;
-      margin: 7px 0;
-      text-align: center;
-      font-size: 28px;
-      color: white;
-      padding: 0;
-    }
+		:host:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
 
-    ::content .s0 {
-      display: none;
-    }
+		::content .example {
+			border: 1px solid #eee;
+			margin: 7px 0;
+			text-align: center;
+			font-size: 28px;
+			color: white;
+			padding: 0;
+		}
 
-    ::content .s1 {
-      width: 8.33333%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs0 {
+			display: none;
+		}
 
-    ::content .s2 {
-      width: 16.66667%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs1 {
+			width: var(--iron-grid-xs1-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s3 {
-      width: 25%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs2 {
+			width: var(--iron-grid-xs2-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s4 {
-      width: 33.33333%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs3 {
+			width: var(--iron-grid-xs3-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s5 {
-      width: 41.66667%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs4 {
+			width: var(--iron-grid-xs4-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s6 {
-      width: 50%;
-       @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs5 {
+			width: var(--iron-grid-xs5-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s7 {
-      width: 58.33333%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs6 {
+			width: var(--iron-grid-xs6-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s8 {
-      width: 66.66667%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs7 {
+			width: var(--iron-grid-xs7-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s9 {
-      width: 75%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs8 {
+			width: var(--iron-grid-xs8-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s10 {
-      width: 83.33333%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs9 {
+			width: var(--iron-grid-xs9-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s11 {
-      width: 91.66667%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs10 {
+			width: var(--iron-grid-xs10-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .s12 {
-      width: 100%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs11 {
+			width: var(--iron-grid-xs11-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s1 {
-      margin-left: 8.33333%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .xs12 {
+			width: var(--iron-grid-xs12-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s2 {
-      margin-left: 16.66667%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs1 {
+			margin-left: 8.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s3 {
-      margin-left: 25%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs2 {
+			margin-left: 16.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s4 {
-      margin-left: 33.33333%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs3 {
+			margin-left: 25%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s5 {
-      margin-left: 41.66667%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs4 {
+			margin-left: 33.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s6 {
-      margin-left: 50%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs5 {
+			margin-left: 41.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s7 {
-      margin-left: 58.33333%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs6 {
+			margin-left: 50%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s8 {
-      margin-left: 66.66667%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs7 {
+			margin-left: 58.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s9 {
-      margin-left: 75%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs8 {
+			margin-left: 66.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s10 {
-      margin-left: 83.33333%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs9 {
+			margin-left: 75%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s11 {
-      margin-left: 91.66667%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs10 {
+			margin-left: 83.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    ::content .offset-s12 {
-      margin-left: 100%;
-      @apply(--iron-grid-default-style);
-      @apply(--iron-grid-element-style);
-    }
+		::content .offset-xs11 {
+			margin-left: 91.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    @media only screen and (min-width: 601px) {
-      ::content .m0 {
-        display: none;
-      }
-      ::content .m1 {
-        width: 8.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m2 {
-        width: 16.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m3 {
-        width: 25%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m4 {
-        width: 33.33333%;
-        margin-left: 0;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m5 {
-        width: 41.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m6 {
-        width: 50%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m7 {
-        width: 58.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m8 {
-        width: 66.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m9 {
-        width: 75%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m10 {
-        width: 83.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m11 {
-        width: 91.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .m12 {
-        width: 100%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m1 {
-        margin-left: 8.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m2 {
-        margin-left: 16.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m3 {
-        margin-left: 25%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m4 {
-        margin-left: 33.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m5 {
-        margin-left: 41.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m6 {
-        margin-left: 50%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m7 {
-        margin-left: 58.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m8 {
-        margin-left: 66.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m9 {
-        margin-left: 75%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m10 {
-        margin-left: 83.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m11 {
-        margin-left: 91.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-m12 {
-        margin-left: 100%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-    }
+		::content .offset-xs12 {
+			margin-left: 100%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
 
-    @media only screen and (min-width: 993px) {
-      ::content .l0 {
-        display: none;
-      }
-      ::content .l1 {
-        width: 8.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l2 {
-        width: 16.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l3 {
-        width: 25%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l4 {
-        width: 33.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l5 {
-        width: 41.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l6 {
-        width: 50%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l7 {
-        width: 58.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l8 {
-        width: 66.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l9 {
-        width: 75%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l10 {
-        width: 83.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l11 {
-        width: 91.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .l12 {
-        width: 100%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l1 {
-        margin-left: 8.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l2 {
-        margin-left: 16.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l3 {
-        margin-left: 25%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l4 {
-        margin-left: 33.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l5 {
-        margin-left: 41.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l6 {
-        margin-left: 50%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l7 {
-        margin-left: 58.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l8 {
-        margin-left: 66.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l9 {
-        margin-left: 75%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l10 {
-        margin-left: 83.33333%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l11 {
-        margin-left: 91.66667%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-      ::content .offset-l12 {
-        margin-left: 100%;
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
-      }
-    }
-  </style>
-  <template>
-    <content></content>
-  </template>
+		::content .s0 {
+			display: none;
+		}
+		::content .s1 {
+			width: var(--iron-grid-s1-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s2 {
+			width: var(--iron-grid-s2-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s3 {
+			width: var(--iron-grid-s3-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s4 {
+			width: var(--iron-grid-s4-width);
+			margin-left: 0;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s5 {
+			width: var(--iron-grid-s5-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s6 {
+			width: var(--iron-grid-s6-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s7 {
+			width: var(--iron-grid-s7-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s8 {
+			width: var(--iron-grid-s8-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s9 {
+			width: var(--iron-grid-s9-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s10 {
+			width: var(--iron-grid-s10-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s11 {
+			width: var(--iron-grid-s11-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .s12 {
+			width: var(--iron-grid-s12-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s1 {
+			margin-left: 8.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s2 {
+			margin-left: 16.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s3 {
+			margin-left: 25%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s4 {
+			margin-left: 33.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s5 {
+			margin-left: 41.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s6 {
+			margin-left: 50%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s7 {
+			margin-left: 58.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s8 {
+			margin-left: 66.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s9 {
+			margin-left: 75%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s10 {
+			margin-left: 83.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s11 {
+			margin-left: 91.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-s12 {
+			margin-left: 100%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+
+		::content .m0 {
+			display: none;
+		}
+		::content .m1 {
+			width: var(--iron-grid-m1-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m2 {
+			width: var(--iron-grid-m2-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m3 {
+			width: var(--iron-grid-m3-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m4 {
+			width: var(--iron-grid-m4-width);
+			margin-left: 0;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m5 {
+			width: var(--iron-grid-m5-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m6 {
+			width: var(--iron-grid-m6-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m7 {
+			width: var(--iron-grid-m7-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m8 {
+			width: var(--iron-grid-m8-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m9 {
+			width: var(--iron-grid-m9-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m10 {
+			width: var(--iron-grid-m10-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m11 {
+			width: var(--iron-grid-m11-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .m12 {
+			width: var(--iron-grid-m12-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m1 {
+			margin-left: 8.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m2 {
+			margin-left: 16.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m3 {
+			margin-left: 25%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m4 {
+			margin-left: 33.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m5 {
+			margin-left: 41.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m6 {
+			margin-left: 50%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m7 {
+			margin-left: 58.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m8 {
+			margin-left: 66.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m9 {
+			margin-left: 75%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m10 {
+			margin-left: 83.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m11 {
+			margin-left: 91.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-m12 {
+			margin-left: 100%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+
+		::content .l0 {
+			display: none;
+		}
+		::content .l1 {
+			width: var(--iron-grid-l1-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l2 {
+			width: var(--iron-grid-l2-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l3 {
+			width: var(--iron-grid-l3-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l4 {
+			width: var(--iron-grid-l4-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l5 {
+			width: var(--iron-grid-l5-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l6 {
+			width: var(--iron-grid-l6-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l7 {
+			width: var(--iron-grid-l7-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l8 {
+			width: var(--iron-grid-l8-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l9 {
+			width: var(--iron-grid-l9-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l10 {
+			width: var(--iron-grid-l10-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l11 {
+			width: var(--iron-grid-l11-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .l12 {
+			width: var(--iron-grid-l12-width);@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l1 {
+			margin-left: 8.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l2 {
+			margin-left: 16.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l3 {
+			margin-left: 25%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l4 {
+			margin-left: 33.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l5 {
+			margin-left: 41.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l6 {
+			margin-left: 50%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l7 {
+			margin-left: 58.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l8 {
+			margin-left: 66.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l9 {
+			margin-left: 75%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l10 {
+			margin-left: 83.33333%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l11 {
+			margin-left: 91.66667%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+		::content .offset-l12 {
+			margin-left: 100%;@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+		}
+    </style>
+    <template>
+
+        <iron-media-query query="[[xsMediaQuery]]" query-matches="{{queryMatcheXS}}"></iron-media-query>
+
+        <iron-media-query query="[[sMediaQuery]]" query-matches="{{queryMatcheS}}"></iron-media-query>
+
+        <iron-media-query query="[[mMediaQuery]]" query-matches="{{queryMatcheM}}"></iron-media-query>
+
+        <iron-media-query query="[[lMediaQuery]]" query-matches="{{queryMatcheL}}"></iron-media-query>
+
+        <iron-media-query query="[[xlMediaQuery]]" query-matches="{{queryMatcheXL}}"></iron-media-query>
+
+        <content></content>
+    </template>
 </dom-module>
 <script>
-  Polymer({
-    is: 'iron-grid',
-  });
+    Polymer({
+        is : 'iron-grid',
+
+        properties : {
+        
+        
+            log : {
+            
+                type : Boolean,
+                value : false
+            },
+
+            xsMediaQuery : {
+
+                type : String,
+                value : "(min-width: 500px)",
+                reflectToAttribute : true
+            },
+
+            sMediaQuery : {
+
+                type : String,
+                value : "(min-width: 600px)",
+                reflectToAttribute : true
+            },
+
+            mMediaQuery : {
+
+                type : String,
+                value : "(min-width: 700px)",
+                reflectToAttribute : true
+            },
+
+            lMediaQuery : {
+
+                type : String,
+                value : "(min-width: 850px)",
+                reflectToAttribute : true
+            },
+
+            xlMediaQuery : {
+
+                type : String,
+                value : "(min-width: 1000px)",
+                reflectToAttribute : true
+            },
+
+            levelsSize : {
+                type : Array,
+                value : function() {
+                    return [8.33333, 16.66667, 25, 33.33333, 41.66667, 50, 58.33333, 66.66667, 75, 83.33333, 91.66667, 100];
+                }
+            },
+
+            screenformats : {
+
+                type : Array,
+                value : function() {
+                    return ["xs", "s", "m", "l", "xl"];
+                },
+                currentScreenformat : {
+
+                    type : String
+                }
+
+            },
+
+            queryMatcheXS : {
+                type : Boolean,
+                value : false,
+                observer : 'onQueryMatcheXSChanged'
+            },
+            queryMatcheS : {
+                type : Boolean,
+                value : false,
+                observer : 'onQueryMatcheSChanged'
+            },
+            queryMatcheM : {
+                type : Boolean,
+                value : false,
+                observer : 'onQueryMatcheMChanged'
+            },
+            queryMatcheL : {
+                type : Boolean,
+                value : false,
+                observer : 'onQueryMatcheLChanged'
+            },
+
+            queryMatcheXL : {
+                type : Boolean,
+                value : false,
+                observer : 'onQueryMatcheXLChanged'
+            },
+        },
+
+        onQueryMatcheXSChanged : function(newValue, oldValue) {
+            if(this.log)
+            console.log("iron-grid 'xs' screen");
+            this.currentScreenformat = 'xs';
+            this.applyResponsive();
+
+        },
+        onQueryMatcheSChanged : function(newValue, oldValue) {
+            if(this.log)
+            console.log("iron-grid 's' screen");
+            this.currentScreenformat = 's';
+            this.applyResponsive();
+
+        },
+        onQueryMatcheMChanged : function(newValue, oldValue) {
+            if(this.log)
+            console.log("iron-grid 'm' screen");
+            this.currentScreenformat = 'm';
+            this.applyResponsive();
+        },
+        onQueryMatcheLChanged : function(newValue, oldValue) {
+            if(this.log)
+            console.log("iron-grid 'l' screen");
+            this.currentScreenformat = 'l';
+            this.applyResponsive();
+        },
+
+        onQueryMatcheXLChanged : function(newValue, oldValue) {
+            if(this.log)
+            console.log("iron-grid 'xl' screen");
+            this.currentScreenformat = 'xl';
+            this.applyResponsive();
+
+        },
+
+        applyResponsive : function() {
+
+            for (var i = 0; i < this.screenformats.length; i++) {
+
+                for (var j = 0; j < 12; j++) {
+
+                    var value = this.levelsSize[j] + '%';
+
+                    if (this.screenformats[i] == this.currentScreenformat) {
+
+                        value = value + ' !important';
+                    }
+
+                    this.customStyle['--iron-grid-' + this.screenformats[i] + (j + 1) + '-width'] = value;
+
+                }
+
+            }
+
+            this.updateStyles();
+
+        }
+    }); 
 </script>
 
 <!--
@@ -565,31 +811,33 @@ Custom property | Description | Default
 `--iron-container-width`|Width of the Container|`90%`
 -->
 <dom-module id="iron-grid-container">
-  <style is="custom-style">
-    :host {
-      --iron-container-width: 90%;
-    }
+    <style is="custom-style">
+		:host {
+			--iron-container-width: 90%;
+		}
 
-    .iron-container {
-      padding: 0 1.5rem;
-      margin: 0 auto;
-      max-width: 1280px;
-      width: var(--iron-container-width);
-    }
+		.iron-container {
+			padding: 0 1.5 rem;
+			margin: 0 auto;
+			max-width: 1280px;
+			width: var(--iron-container-width);
+		}
 
-    .iron-container::content iron-grid {
-      margin-left: -0.75rem;
-      margin-right: -0.75rem;
-    }
-  </style>
-  <template>
-    <div class="iron-container">
-      <content></content>
-    </div>
-  </template>
+		.iron-container::content iron-grid {
+			margin-left: -0.75 rem;
+			margin-right: -0.75 rem;
+		}
+    </style>
+    <template>
+        <div class="iron-container">
+
+            <content></content>
+        </div>
+    </template>
 </dom-module>
 <script>
-  Polymer({
-    is: 'iron-grid-container',
-  });
+    Polymer({
+        is : 'iron-grid-container',
+
+    }); 
 </script>
