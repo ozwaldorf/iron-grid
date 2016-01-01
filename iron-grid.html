@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-media-query/iron-media-query.html">
+<link rel="import" href="../px10-node-resize-detector/px10-element-resize-detector.html">
 
 <!--
 # Iron Container
@@ -628,15 +629,9 @@ In the previous examples, we only defined the size for small screens using `s12`
     </style>
     <template>
 
-        <iron-media-query query="[[xsMediaQuery]]" query-matches="{{queryMatcheXS}}"></iron-media-query>
+        <px10-element-resize-detector target="{{}}" on-resize="resize"></px10-element-resize-detector>
 
-        <iron-media-query query="[[sMediaQuery]]" query-matches="{{queryMatcheS}}"></iron-media-query>
-
-        <iron-media-query query="[[mMediaQuery]]" query-matches="{{queryMatcheM}}"></iron-media-query>
-
-        <iron-media-query query="[[lMediaQuery]]" query-matches="{{queryMatcheL}}"></iron-media-query>
-
-        <iron-media-query query="[[xlMediaQuery]]" query-matches="{{queryMatcheXL}}"></iron-media-query>
+        
 
         <content></content>
     </template>
@@ -646,46 +641,45 @@ In the previous examples, we only defined the size for small screens using `s12`
         is : 'iron-grid',
 
         properties : {
-        
-        
+
             log : {
-            
+
                 type : Boolean,
                 value : false
             },
 
-            xsMediaQuery : {
+            xsMinWidth : {
 
-                type : String,
-                value : "(min-width: 500px)",
+                type : Number,
+                value : 500,
                 reflectToAttribute : true
             },
 
-            sMediaQuery : {
+            sMinWidth : {
 
-                type : String,
-                value : "(min-width: 600px)",
+                type : Number,
+                value : 600,
                 reflectToAttribute : true
             },
 
-            mMediaQuery : {
+            mMinWidth : {
 
-                type : String,
-                value : "(min-width: 700px)",
+                type : Number,
+                value : 700,
                 reflectToAttribute : true
             },
 
-            lMediaQuery : {
+            lMinWidth : {
 
-                type : String,
-                value : "(min-width: 850px)",
+                type : Number,
+                value : 850,
                 reflectToAttribute : true
             },
 
-            xlMediaQuery : {
+            xlMinWidth : {
 
-                type : String,
-                value : "(min-width: 1000px)",
+                type : Number,
+                value : 1000,
                 reflectToAttribute : true
             },
 
@@ -735,38 +729,39 @@ In the previous examples, we only defined the size for small screens using `s12`
                 value : false,
                 observer : 'onQueryMatcheXLChanged'
             },
+
         },
 
         onQueryMatcheXSChanged : function(newValue, oldValue) {
-            if(this.log)
-            console.log("iron-grid 'xs' screen");
+            if (this.log)
+                console.log("iron-grid 'xs' screen");
             this.currentScreenformat = 'xs';
             this.applyResponsive();
 
         },
         onQueryMatcheSChanged : function(newValue, oldValue) {
-            if(this.log)
-            console.log("iron-grid 's' screen");
+            if (this.log)
+                console.log("iron-grid 's' screen");
             this.currentScreenformat = 's';
             this.applyResponsive();
 
         },
         onQueryMatcheMChanged : function(newValue, oldValue) {
-            if(this.log)
-            console.log("iron-grid 'm' screen");
+            if (this.log)
+                console.log("iron-grid 'm' screen");
             this.currentScreenformat = 'm';
             this.applyResponsive();
         },
         onQueryMatcheLChanged : function(newValue, oldValue) {
-            if(this.log)
-            console.log("iron-grid 'l' screen");
+            if (this.log)
+                console.log("iron-grid 'l' screen");
             this.currentScreenformat = 'l';
             this.applyResponsive();
         },
 
         onQueryMatcheXLChanged : function(newValue, oldValue) {
-            if(this.log)
-            console.log("iron-grid 'xl' screen");
+            if (this.log)
+                console.log("iron-grid 'xl' screen");
             this.currentScreenformat = 'xl';
             this.applyResponsive();
 
@@ -793,7 +788,14 @@ In the previous examples, we only defined the size for small screens using `s12`
 
             this.updateStyles();
 
-        }
+        },
+
+        resize : function(event) {
+
+          
+            console.log(event.target.offsetWidth);
+            
+        },
     }); 
 </script>
 
