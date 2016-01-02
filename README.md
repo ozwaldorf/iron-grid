@@ -61,7 +61,7 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 
 ### Orders
 
-You can change normal elements order appearance following screen. To order, simply add `order-12-s` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number is the appearance order (from 1 to 12). Default element order is 6, so in this case the element appear after standard element.
+You can change normal elements order appearance following screen. To order, simply add `order-1-s` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number is the appearance order (from 1 to 12). Default element order is 6, so in this case the element appear before standard element.
 
 ![3](https://raw.githubusercontent.com/maxiplay/iron-grid/master/img/4.png)
 
