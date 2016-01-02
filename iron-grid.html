@@ -234,17 +234,75 @@ In the previous examples, we only defined the size for small screens using `s12`
 			--iron-grid-offset-xl10-margin-left: 83.33333%;
 			--iron-grid-offset-xl11-margin-left: 91.66667%;
 			--iron-grid-offset-xl12-margin-left: 100%;
+			--iron-grid-xs-order-1: 1;
+			--iron-grid-xs-order-2: 2;
+			--iron-grid-xs-order-3: 3;
+			--iron-grid-xs-order-4: 4;
+			--iron-grid-xs-order-4: 5;
+			--iron-grid-xs-order-6: 6;
+			--iron-grid-xs-order-7: 7;
+			--iron-grid-xs-order-8: 8;
+			--iron-grid-xs-order-9: 9;
+			--iron-grid-xs-order-10: 10;
+			--iron-grid-xs-order-11: 11;
+			--iron-grid-xs-order-12: 12;
+			--iron-grid-s-order-1: 1;
+			--iron-grid-s-order-2: 2;
+			--iron-grid-s-order-3: 3;
+			--iron-grid-s-order-4: 4;
+			--iron-grid-s-order-4: 5;
+			--iron-grid-s-order-6: 6;
+			--iron-grid-s-order-7: 7;
+			--iron-grid-s-order-8: 8;
+			--iron-grid-s-order-9: 9;
+			--iron-grid-s-order-10: 10;
+			--iron-grid-s-order-11: 11;
+			--iron-grid-s-order-12: 12;
+			--iron-grid-m-order-1: 1;
+			--iron-grid-m-order-2: 2;
+			--iron-grid-m-order-3: 3;
+			--iron-grid-m-order-4: 4;
+			--iron-grid-m-order-4: 5;
+			--iron-grid-m-order-6: 6;
+			--iron-grid-m-order-7: 7;
+			--iron-grid-m-order-8: 8;
+			--iron-grid-m-order-9: 9;
+			--iron-grid-m-order-10: 10;
+			--iron-grid-m-order-11: 11;
+			--iron-grid-m-order-12: 12;
+			--iron-grid-l-order-1: 1;
+			--iron-grid-l-order-2: 2;
+			--iron-grid-l-order-3: 3;
+			--iron-grid-l-order-4: 4;
+			--iron-grid-l-order-4: 5;
+			--iron-grid-l-order-6: 6;
+			--iron-grid-l-order-7: 7;
+			--iron-grid-l-order-8: 8;
+			--iron-grid-l-order-9: 9;
+			--iron-grid-l-order-10: 10;
+			--iron-grid-l-order-11: 11;
+			--iron-grid-l-order-12: 12;
+			--iron-grid-xl-order-1: 1;
+			--iron-grid-xl-order-2: 2;
+			--iron-grid-xl-order-3: 3;
+			--iron-grid-xl-order-4: 4;
+			--iron-grid-xl-order-4: 5;
+			--iron-grid-xl-order-6: 6;
+			--iron-grid-xl-order-7: 7;
+			--iron-grid-xl-order-8: 8;
+			--iron-grid-xl-order-9: 9;
+			--iron-grid-xl-order-10: 10;
+			--iron-grid-xl-order-11: 11;
+			--iron-grid-xl-order-12: 12;
 			--iron-grid-default-style: {
 			margin-left: 0;
 			display: flex;
-			 flex-wrap:  wrap;
+			order : 6;
+			flex-wrap: wrap;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
 			padding: 0 0.75 rem;
-
-			
-			
 		};
 
 		}
@@ -271,61 +329,73 @@ In the previous examples, we only defined the size for small screens using `s12`
 		::content .xs1 {
 			width: var(--iron-grid-xs1-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs2 {
 			width: var(--iron-grid-xs2-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs3 {
 			width: var(--iron-grid-xs3-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs4 {
 			width: var(--iron-grid-xs4-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs5 {
 			width: var(--iron-grid-xs5-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs6 {
 			width: var(--iron-grid-xs6-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs7 {
 			width: var(--iron-grid-xs7-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs8 {
 			width: var(--iron-grid-xs8-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs9 {
 			width: var(--iron-grid-xs9-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs10 {
 			width: var(--iron-grid-xs10-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs11 {
 			width: var(--iron-grid-xs11-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .xs12 {
 			width: var(--iron-grid-xs12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 
 		::content .offset-xs1 {@apply(--iron-grid-default-style);
@@ -388,57 +458,117 @@ In the previous examples, we only defined the size for small screens using `s12`
 			margin-left: var(--iron-grid-offset-xs12-margin-left);
 		}
 
+		::content .order-1-xs {
+			order: var(--iron-grid-xs-order-1);
+		}
+
+		::content .order-2-xs {
+			order: var(--iron-grid-xs-order-2);
+		}
+
+		::content .order-3-xs {
+			order: var(--iron-grid-xs-order-3);
+		}
+
+		::content .order-4-xs {
+			order: var(--iron-grid-xs-order-4);
+		}
+
+		::content .order-5-xs {
+			order: var(--iron-grid-xs-order-5);
+		}
+
+		::content .order-6-xs {
+			order: var(--iron-grid-xs-order-6);
+		}
+
+		::content .order-7-xs {
+			order: var(--iron-grid-xs-order-7);
+		}
+
+		::content .order-8-xs {
+			order: var(--iron-grid-xs-order-8);
+		}
+
+		::content .order-9-xs {
+			order: var(--iron-grid-xs-order-9);
+		}
+
+		::content .order-10-xs {
+			order: var(--iron-grid-xs-order-10);
+		}
+
+		::content .order-11-xs {
+			order: var(--iron-grid-xs-order-11);
+		}
+
+		::content .order-12-xs {
+			order: var(--iron-grid-xs-order-12);
+		}
+
 		::content .s0 {
 			display: none;
 		}
 		::content .s1 {
 			width: var(--iron-grid-s1-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s2 {
 			width: var(--iron-grid-s2-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s3 {
 			width: var(--iron-grid-s3-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s4 {
 			width: var(--iron-grid-s4-width);
 			margin-left: 0;@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s5 {
 			width: var(--iron-grid-s5-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s6 {
 			width: var(--iron-grid-s6-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s7 {
 			width: var(--iron-grid-s7-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s8 {
 			width: var(--iron-grid-s8-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s9 {
 			width: var(--iron-grid-s9-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s10 {
 			width: var(--iron-grid-s10-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s11 {
 			width: var(--iron-grid-s11-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .s12 {
 			width: var(--iron-grid-s12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .offset-s1 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
@@ -489,56 +619,116 @@ In the previous examples, we only defined the size for small screens using `s12`
 			margin-left: var(--iron-grid-offset-s12-margin-left);
 		}
 
+		::content .order-1-s {
+			order: var(--iron-grid-s-order-1);
+		}
+
+		::content .order-2-s {
+			order: var(--iron-grid-s-order-2);
+		}
+
+		::content .order-3-s {
+			order: var(--iron-grid-s-order-3);
+		}
+
+		::content .order-4-s {
+			order: var(--iron-grid-s-order-4);
+		}
+
+		::content .order-5-s {
+			order: var(--iron-grid-s-order-5);
+		}
+
+		::content .order-6-s {
+			order: var(--iron-grid-s-order-6);
+		}
+
+		::content .order-7-s {
+			order: var(--iron-grid-s-order-7);
+		}
+
+		::content .order-8-s {
+			order: var(--iron-grid-s-order-8);
+		}
+
+		::content .order-9-s {
+			order: var(--iron-grid-s-order-9);
+		}
+
+		::content .order-10-s {
+			order: var(--iron-grid-s-order-10);
+		}
+
+		::content .order-11-s {
+			order: var(--iron-grid-s-order-11);
+		}
+
+		::content .order-12-s {
+			order: var(--iron-grid-s-order-12);
+		}
+
 		::content .m0 {
 			display: none;
 		}
 		::content .m1 {
 			width: var(--iron-grid-m1-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m2 {
 			width: var(--iron-grid-m2-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m3 {
 			width: var(--iron-grid-m3-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m4 {
 			width: var(--iron-grid-m4-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m5 {
 			width: var(--iron-grid-m5-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m6 {
 			width: var(--iron-grid-m6-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m7 {
 			width: var(--iron-grid-m7-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m8 {
 			width: var(--iron-grid-m8-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m9 {
 			width: var(--iron-grid-m9-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m10 {
 			width: var(--iron-grid-m10-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m11 {
 			width: var(--iron-grid-m11-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .m12 {
 			width: var(--iron-grid-m12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .offset-m1 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
@@ -588,6 +778,54 @@ In the previous examples, we only defined the size for small screens using `s12`
 			@apply(--iron-grid-element-style);
 			margin-left: var(--iron-grid-offset-m12-margin-left);
 		}
+		
+		::content .order-1-m {
+            order: var(--iron-grid-m-order-1);
+        }
+
+        ::content .order-2-m {
+            order: var(--iron-grid-m-order-2);
+        }
+
+        ::content .order-3-m {
+            order: var(--iron-grid-m-order-3);
+        }
+
+        ::content .order-4-m {
+            order: var(--iron-grid-m-order-4);
+        }
+
+        ::content .order-5-m {
+            order: var(--iron-grid-m-order-5);
+        }
+
+        ::content .order-6-m {
+            order: var(--iron-grid-m-order-6);
+        }
+
+        ::content .order-7-m {
+            order: var(--iron-grid-m-order-7);
+        }
+
+        ::content .order-8-m {
+            order: var(--iron-grid-m-order-8);
+        }
+
+        ::content .order-9-m {
+            order: var(--iron-grid-m-order-9);
+        }
+
+        ::content .order-10-m {
+            order: var(--iron-grid-m-order-10);
+        }
+
+        ::content .order-11-m {
+            order: var(--iron-grid-m-order-11);
+        }
+
+        ::content .order-12-m {
+            order: var(--iron-grid-m-order-12);
+        }
 
 		::content .l0 {
 			display: none;
@@ -595,50 +833,62 @@ In the previous examples, we only defined the size for small screens using `s12`
 		::content .l1 {
 			width: var(--iron-grid-l1-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l2 {
 			width: var(--iron-grid-l2-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l3 {
 			width: var(--iron-grid-l3-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l4 {
 			width: var(--iron-grid-l4-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l5 {
 			width: var(--iron-grid-l5-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l6 {
 			width: var(--iron-grid-l6-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l7 {
 			width: var(--iron-grid-l7-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l8 {
 			width: var(--iron-grid-l8-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l9 {
 			width: var(--iron-grid-l9-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l10 {
 			width: var(--iron-grid-l10-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l11 {
 			width: var(--iron-grid-l11-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .l12 {
 			width: var(--iron-grid-l12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .offset-l1 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
@@ -688,6 +938,54 @@ In the previous examples, we only defined the size for small screens using `s12`
 			@apply(--iron-grid-element-style);
 			margin-left: var(--iron-grid-offset-l1-margin-left);
 		}
+		
+		::content .order-1-l {
+            order: var(--iron-grid-l-order-1);
+        }
+
+        ::content .order-2-l {
+            order: var(--iron-grid-l-order-2);
+        }
+
+        ::content .order-3-l {
+            order: var(--iron-grid-l-order-3);
+        }
+
+        ::content .order-4-l {
+            order: var(--iron-grid-l-order-4);
+        }
+
+        ::content .order-5-l {
+            order: var(--iron-grid-l-order-5);
+        }
+
+        ::content .order-6-l {
+            order: var(--iron-grid-l-order-6);
+        }
+
+        ::content .order-7-l {
+            order: var(--iron-grid-l-order-7);
+        }
+
+        ::content .order-8-l {
+            order: var(--iron-grid-l-order-8);
+        }
+
+        ::content .order-9-l {
+            order: var(--iron-grid-l-order-9);
+        }
+
+        ::content .order-10-l {
+            order: var(--iron-grid-l-order-10);
+        }
+
+        ::content .order-11-l {
+            order: var(--iron-grid-l-order-11);
+        }
+
+        ::content .order-12-l {
+            order: var(--iron-grid-l-order-12);
+        }
 
 		::content .xl0 {
 			display: none;
@@ -695,50 +993,62 @@ In the previous examples, we only defined the size for small screens using `s12`
 		::content .xl1 {
 			width: var(--iron-grid-xl1-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl2 {
 			width: var(--iron-grid-xl2-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl3 {
 			width: var(--iron-grid-xl3-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl4 {
 			width: var(--iron-grid-xl4-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl5 {
 			width: var(--iron-grid-xl5-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl6 {
 			width: var(--iron-grid-xl6-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl7 {
 			width: var(--iron-grid-xl7-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl8 {
 			width: var(--iron-grid-xl8-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl9 {
 			width: var(--iron-grid-xl9-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl10 {
 			width: var(--iron-grid-xl10-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl11 {
 			width: var(--iron-grid-xl11-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .xl12 {
 			width: var(--iron-grid-xl12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+
 		}
 		::content .offset-xl1 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
@@ -788,6 +1098,54 @@ In the previous examples, we only defined the size for small screens using `s12`
 			@apply(--iron-grid-element-style);
 			margin-left: var(--iron-grid-offset-xl12-margin-left);
 		}
+		
+		::content .order-1-xs {
+            order: var(--iron-grid-xs-order-1);
+        }
+
+        ::content .order-2-xs {
+            order: var(--iron-grid-xs-order-2);
+        }
+
+        ::content .order-3-xs {
+            order: var(--iron-grid-xs-order-3);
+        }
+
+        ::content .order-4-xs {
+            order: var(--iron-grid-xs-order-4);
+        }
+
+        ::content .order-5-xs {
+            order: var(--iron-grid-xs-order-5);
+        }
+
+        ::content .order-6-xs {
+            order: var(--iron-grid-xs-order-6);
+        }
+
+        ::content .order-7-xs {
+            order: var(--iron-grid-xs-order-7);
+        }
+
+        ::content .order-8-xs {
+            order: var(--iron-grid-xs-order-8);
+        }
+
+        ::content .order-9-xs {
+            order: var(--iron-grid-xs-order-9);
+        }
+
+        ::content .order-10-xs {
+            order: var(--iron-grid-xs-order-10);
+        }
+
+        ::content .order-11-xs {
+            order: var(--iron-grid-xs-order-11);
+        }
+
+        ::content .order-12-xs {
+            order: var(--iron-grid-xs-order-12);
+        }
     </style>
     <template>
 
@@ -842,7 +1200,6 @@ In the previous examples, we only defined the size for small screens using `s12`
                     return [8.33333, 16.66667, 25, 33.33333, 41.66667, 50, 58.33333, 66.66667, 75, 83.33333, 91.66667, 100];
                 }
             },
-            
 
             screenformats : {
 
@@ -868,15 +1225,18 @@ In the previous examples, we only defined the size for small screens using `s12`
                 for (var j = 0; j < 12; j++) {
 
                     var value = this.ratios[j] + '%';
+                    var level = (j + 1);
+                    var order = ""+level;
 
                     if (this.screenformats[i] == this.currentScreenformat) {
 
                         value = value + ' !important';
+                        order = order + ' !important';
                     }
 
-                    this.customStyle['--iron-grid-' + this.screenformats[i] + (j + 1) + '-width'] = value;
-                    this.customStyle['--iron-grid-offset-' + this.screenformats[i] + (j + 1) + '-margin-left'] = value;
-                  
+                    this.customStyle['--iron-grid-' + this.screenformats[i] + level + '-width'] = value;
+                    this.customStyle['--iron-grid-offset-' + this.screenformats[i] + level + '-margin-left'] = value;
+                    this.customStyle['--iron-grid-' + this.screenformats[i] +'-order-'+ level] = order;
                 }
 
             }
