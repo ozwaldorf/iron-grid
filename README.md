@@ -63,7 +63,7 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 
 You can change normal elements order appearance following screen. To order, simply add `order-12-s` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number is the appearance order (from 1 to 12). Default element order is 6, so in this case the element appear after standard element.
 
-![3](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/4.png)
+![3](https://raw.githubusercontent.com/maxiplay/iron-grid/master/img/4.png)
 
 ### Hiding elements
 
@@ -90,7 +90,7 @@ Above we showed you how to layout elements using our grid system. Now we'll show
 
 In the previous examples, we only defined the size for small screens using `s12`. This is fine if we want a fixed layout since the rules propogate upwards. By just saying s12, we are essentially saying `s12 m12 l12`. But by explicitly defining the size we can make our website more responsive.
 
-![3](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/3.png)
+![4](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/3.png)
 
 ```html
 <iron-grid>
