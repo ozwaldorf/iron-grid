@@ -1,6 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-media-query/iron-media-query.html">
-<link rel="import" href="../px10-node-resize-detector/px10-element-resize-detector.html">
+<link rel="import" href="../px10-element-resize-detector/px10-element-resize-detector.html">
 
 <!--
 # Iron Container
@@ -174,14 +174,77 @@ In the previous examples, we only defined the size for small screens using `s12`
 			--iron-grid-xl10-width: 83.33333%;
 			--iron-grid-xl11-width: 91.66667%;
 			--iron-grid-xl12-width: 100%;
+			--iron-grid-offset-xs1-margin-left: 8.33333%;
+			--iron-grid-offset-xs2-margin-left: 16.66667%;
+			--iron-grid-offset-xs3-margin-left: 25%;
+			--iron-grid-offset-xs4-margin-left: 33.33333%;
+			--iron-grid-offset-xs5-margin-left: 41.66667%;
+			--iron-grid-offset-xs6-margin-left: 50%;
+			--iron-grid-offset-xs7-margin-left: 58.33333%;
+			--iron-grid-offset-xs8-margin-left: 66.66667%;
+			--iron-grid-offset-xs9-margin-left: 75%;
+			--iron-grid-offset-xs10-margin-left: 83.33333%;
+			--iron-grid-offset-xs11-margin-left: 91.66667%;
+			--iron-grid-offset-xs12-margin-left: 100%;
+			--iron-grid-offset-s1-margin-left: 8.33333%;
+			--iron-grid-offset-s2-margin-left: 16.66667%;
+			--iron-grid-offset-s3-margin-left: 25%;
+			--iron-grid-offset-s4-margin-left: 33.33333%;
+			--iron-grid-offset-s5-margin-left: 41.66667%;
+			--iron-grid-offset-s6-margin-left: 50%;
+			--iron-grid-offset-s7-margin-left: 58.33333%;
+			--iron-grid-offset-s8-margin-left: 66.66667%;
+			--iron-grid-offset-s9-margin-left: 75%;
+			--iron-grid-offset-s10-margin-left: 83.33333%;
+			--iron-grid-offset-s11-margin-left: 91.66667%;
+			--iron-grid-offset-s12-margin-left: 100%;
+			--iron-grid-offset-m1-margin-left: 8.33333%;
+			--iron-grid-offset-m2-margin-left: 16.66667%;
+			--iron-grid-offset-m3-margin-left: 25%;
+			--iron-grid-offset-m4-margin-left: 33.33333%;
+			--iron-grid-offset-m5-margin-left: 41.66667%;
+			--iron-grid-offset-m6-margin-left: 50%;
+			--iron-grid-offset-m7-margin-left: 58.33333%;
+			--iron-grid-offset-m8-margin-left: 66.66667%;
+			--iron-grid-offset-m9-margin-left: 75%;
+			--iron-grid-offset-m10-margin-left: 83.33333%;
+			--iron-grid-offset-m11-margin-left: 91.66667%;
+			--iron-grid-offset-m12-margin-left: 100%;
+			--iron-grid-offset-l1-margin-left: 8.33333%;
+			--iron-grid-offset-l2-margin-left: 16.66667%;
+			--iron-grid-offset-l3-margin-left: 25%;
+			--iron-grid-offset-l4-margin-left: 33.33333%;
+			--iron-grid-offset-l5-margin-left: 41.66667%;
+			--iron-grid-offset-l6-margin-left: 50%;
+			--iron-grid-offset-l7-margin-left: 58.33333%;
+			--iron-grid-offset-l8-margin-left: 66.66667%;
+			--iron-grid-offset-l9-margin-left: 75%;
+			--iron-grid-offset-l10-margin-left: 83.33333%;
+			--iron-grid-offset-l11-margin-left: 91.66667%;
+			--iron-grid-offset-l12-margin-left: 100%;
+			--iron-grid-offset-xl1-margin-left: 8.33333%;
+			--iron-grid-offset-xl2-margin-left: 16.66667%;
+			--iron-grid-offset-xl3-margin-left: 25%;
+			--iron-grid-offset-xl4-margin-left: 33.33333%;
+			--iron-grid-offset-xl5-margin-left: 41.66667%;
+			--iron-grid-offset-xl6-margin-left: 50%;
+			--iron-grid-offset-xl7-margin-left: 58.33333%;
+			--iron-grid-offset-xl8-margin-left: 66.66667%;
+			--iron-grid-offset-xl9-margin-left: 75%;
+			--iron-grid-offset-xl10-margin-left: 83.33333%;
+			--iron-grid-offset-xl11-margin-left: 91.66667%;
+			--iron-grid-offset-xl12-margin-left: 100%;
 			--iron-grid-default-style: {
 			margin-left: 0;
-			float: left;
-			display: block;
+			display: flex;
+			 flex-wrap:  wrap;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
 			padding: 0 0.75 rem;
+
+			
+			
 		};
 
 		}
@@ -265,64 +328,64 @@ In the previous examples, we only defined the size for small screens using `s12`
 			@apply(--iron-grid-element-style);
 		}
 
-		::content .offset-xs1 {
-			margin-left: 8.33333%;@apply(--iron-grid-default-style);
+		::content .offset-xs1 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs1-margin-left);
 		}
 
-		::content .offset-xs2 {
-			margin-left: 16.66667%;@apply(--iron-grid-default-style);
+		::content .offset-xs2 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs2-margin-left);
 		}
 
-		::content .offset-xs3 {
-			margin-left: 25%;@apply(--iron-grid-default-style);
+		::content .offset-xs3 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs3-margin-left);
 		}
 
-		::content .offset-xs4 {
-			margin-left: 33.33333%;@apply(--iron-grid-default-style);
+		::content .offset-xs4 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs4-margin-left);
 		}
 
-		::content .offset-xs5 {
-			margin-left: 41.66667%;@apply(--iron-grid-default-style);
+		::content .offset-xs5 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs5-margin-left);
 		}
 
-		::content .offset-xs6 {
-			margin-left: 50%;@apply(--iron-grid-default-style);
+		::content .offset-xs6 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs6-margin-left);
 		}
 
-		::content .offset-xs7 {
-			margin-left: 58.33333%;@apply(--iron-grid-default-style);
+		::content .offset-xs7 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs7-margin-left);
 		}
 
-		::content .offset-xs8 {
-			margin-left: 66.66667%;@apply(--iron-grid-default-style);
+		::content .offset-xs8 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs8-margin-left);
 		}
 
-		::content .offset-xs9 {
-			margin-left: 75%;@apply(--iron-grid-default-style);
+		::content .offset-xs9 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs9-margin-left);
 		}
 
-		::content .offset-xs10 {
-			margin-left: 83.33333%;@apply(--iron-grid-default-style);
+		::content .offset-xs10 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs10-margin-left);
 		}
 
-		::content .offset-xs11 {
-			margin-left: 91.66667%;@apply(--iron-grid-default-style);
+		::content .offset-xs11 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs11-margin-left);
 		}
 
-		::content .offset-xs12 {
-			margin-left: 100%;@apply(--iron-grid-default-style);
+		::content .offset-xs12 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xs12-margin-left);
 		}
 
 		::content .s0 {
@@ -377,53 +440,53 @@ In the previous examples, we only defined the size for small screens using `s12`
 			width: var(--iron-grid-s12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-s1 {
-			margin-left: 8.33333%;@apply(--iron-grid-default-style);
+		::content .offset-s1 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s1-margin-left);
 		}
-		::content .offset-s2 {
-			margin-left: 16.66667%;@apply(--iron-grid-default-style);
+		::content .offset-s2 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s2-margin-left);
 		}
-		::content .offset-s3 {
-			margin-left: 25%;@apply(--iron-grid-default-style);
+		::content .offset-s3 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s3-margin-left);
 		}
-		::content .offset-s4 {
-			margin-left: 33.33333%;@apply(--iron-grid-default-style);
+		::content .offset-s4 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s4-margin-left);
 		}
-		::content .offset-s5 {
-			margin-left: 41.66667%;@apply(--iron-grid-default-style);
+		::content .offset-s5 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s5-margin-left);
 		}
-		::content .offset-s6 {
-			margin-left: 50%;@apply(--iron-grid-default-style);
+		::content .offset-s6 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s6-margin-left);
 		}
-		::content .offset-s7 {
-			margin-left: 58.33333%;@apply(--iron-grid-default-style);
+		::content .offset-s7 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s7-margin-left);
 		}
-		::content .offset-s8 {
-			margin-left: 66.66667%;@apply(--iron-grid-default-style);
+		::content .offset-s8 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s8-margin-left);
 		}
-		::content .offset-s9 {
-			margin-left: 75%;@apply(--iron-grid-default-style);
+		::content .offset-s9 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s9-margin-left);
 		}
-		::content .offset-s10 {
-			margin-left: 83.33333%;@apply(--iron-grid-default-style);
+		::content .offset-s10 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s10-margin-left);
 		}
-		::content .offset-s11 {
-			margin-left: 91.66667%;@apply(--iron-grid-default-style);
+		::content .offset-s11 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s12-margin-left);
 		}
-		::content .offset-s12 {
-			margin-left: 100%;@apply(--iron-grid-default-style);
+		::content .offset-s12 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-s12-margin-left);
 		}
 
 		::content .m0 {
@@ -442,8 +505,7 @@ In the previous examples, we only defined the size for small screens using `s12`
 			@apply(--iron-grid-element-style);
 		}
 		::content .m4 {
-			width: var(--iron-grid-m4-width);
-			margin-left: 0;@apply(--iron-grid-default-style);
+			width: var(--iron-grid-m4-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
 		::content .m5 {
@@ -478,53 +540,53 @@ In the previous examples, we only defined the size for small screens using `s12`
 			width: var(--iron-grid-m12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-m1 {
-			margin-left: 8.33333%;@apply(--iron-grid-default-style);
+		::content .offset-m1 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m1-margin-left);
 		}
-		::content .offset-m2 {
-			margin-left: 16.66667%;@apply(--iron-grid-default-style);
+		::content .offset-m2 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m2-margin-left);
 		}
-		::content .offset-m3 {
-			margin-left: 25%;@apply(--iron-grid-default-style);
+		::content .offset-m3 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m3-margin-left);
 		}
-		::content .offset-m4 {
-			margin-left: 33.33333%;@apply(--iron-grid-default-style);
+		::content .offset-m4 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m4-margin-left);
 		}
-		::content .offset-m5 {
-			margin-left: 41.66667%;@apply(--iron-grid-default-style);
+		::content .offset-m5 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m5-margin-left);
 		}
-		::content .offset-m6 {
-			margin-left: 50%;@apply(--iron-grid-default-style);
+		::content .offset-m6 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m6-margin-left);
 		}
-		::content .offset-m7 {
-			margin-left: 58.33333%;@apply(--iron-grid-default-style);
+		::content .offset-m7 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m7-margin-left);
 		}
-		::content .offset-m8 {
-			margin-left: 66.66667%;@apply(--iron-grid-default-style);
+		::content .offset-m8 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m8-margin-left);
 		}
-		::content .offset-m9 {
-			margin-left: 75%;@apply(--iron-grid-default-style);
+		::content .offset-m9 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m9-margin-left);
 		}
-		::content .offset-m10 {
-			margin-left: 83.33333%;@apply(--iron-grid-default-style);
+		::content .offset-m10 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m10-margin-left);
 		}
-		::content .offset-m11 {
-			margin-left: 91.66667%;@apply(--iron-grid-default-style);
+		::content .offset-m11 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m11-margin-left);
 		}
-		::content .offset-m12 {
-			margin-left: 100%;@apply(--iron-grid-default-style);
+		::content .offset-m12 {@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-m12-margin-left);
 		}
 
 		::content .l0 {
@@ -578,60 +640,158 @@ In the previous examples, we only defined the size for small screens using `s12`
 			width: var(--iron-grid-l12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l1 {
-			margin-left: 8.33333%;@apply(--iron-grid-default-style);
+		::content .offset-l1 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l2 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l3 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l4 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l5 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l6 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l7 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l8 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l9 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l10 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l11 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+		::content .offset-l12 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-l1-margin-left);
+		}
+
+		::content .xl0 {
+			display: none;
+		}
+		::content .xl1 {
+			width: var(--iron-grid-xl1-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l2 {
-			margin-left: 16.66667%;@apply(--iron-grid-default-style);
+		::content .xl2 {
+			width: var(--iron-grid-xl2-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l3 {
-			margin-left: 25%;@apply(--iron-grid-default-style);
+		::content .xl3 {
+			width: var(--iron-grid-xl3-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l4 {
-			margin-left: 33.33333%;@apply(--iron-grid-default-style);
+		::content .xl4 {
+			width: var(--iron-grid-xl4-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l5 {
-			margin-left: 41.66667%;@apply(--iron-grid-default-style);
+		::content .xl5 {
+			width: var(--iron-grid-xl5-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l6 {
-			margin-left: 50%;@apply(--iron-grid-default-style);
+		::content .xl6 {
+			width: var(--iron-grid-xl6-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l7 {
-			margin-left: 58.33333%;@apply(--iron-grid-default-style);
+		::content .xl7 {
+			width: var(--iron-grid-xl7-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l8 {
-			margin-left: 66.66667%;@apply(--iron-grid-default-style);
+		::content .xl8 {
+			width: var(--iron-grid-xl8-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l9 {
-			margin-left: 75%;@apply(--iron-grid-default-style);
+		::content .xl9 {
+			width: var(--iron-grid-xl9-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l10 {
-			margin-left: 83.33333%;@apply(--iron-grid-default-style);
+		::content .xl10 {
+			width: var(--iron-grid-xl10-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l11 {
-			margin-left: 91.66667%;@apply(--iron-grid-default-style);
+		::content .xl11 {
+			width: var(--iron-grid-xl11-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
 		}
-		::content .offset-l12 {
-			margin-left: 100%;@apply(--iron-grid-default-style);
+		::content .xl12 {
+			width: var(--iron-grid-xl12-width);@apply(--iron-grid-default-style);
 			@apply(--iron-grid-element-style);
+		}
+		::content .offset-xl1 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl1-margin-left);
+		}
+		::content .offset-xl2 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl2-margin-left);
+		}
+		::content .offset-xl3 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl3-margin-left);
+		}
+		::content .offset-xl4 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl4-margin-left);
+		}
+		::content .offset-xl5 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl5-margin-left);
+		}
+		::content .offset-xl6 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl6-margin-left);
+		}
+		::content .offset-xl7 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl7-margin-left);
+		}
+		::content .offset-xl8 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl8-margin-left);
+		}
+		::content .offset-xl9 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl9-margin-left);
+		}
+		::content .offset-xl10 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl10-margin-left);
+		}
+		::content .offset-xl11 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl11-margin-left);
+		}
+		::content .offset-xl12 {@apply(--iron-grid-default-style);
+			@apply(--iron-grid-element-style);
+			margin-left: var(--iron-grid-offset-xl12-margin-left);
 		}
     </style>
     <template>
 
-        <px10-element-resize-detector target="{{}}" on-resize="resize"></px10-element-resize-detector>
-
-        
+        <px10-element-resize-detector target="{{}}" on-resize="onResize"></px10-element-resize-detector>
 
         <content></content>
     </template>
@@ -648,132 +808,66 @@ In the previous examples, we only defined the size for small screens using `s12`
                 value : false
             },
 
-            xsMinWidth : {
+            xsMaxWidth : {
 
                 type : Number,
                 value : 500,
                 reflectToAttribute : true
             },
 
-            sMinWidth : {
+            sMaxWidth : {
 
                 type : Number,
                 value : 600,
                 reflectToAttribute : true
             },
 
-            mMinWidth : {
+            mMaxWidth : {
 
                 type : Number,
                 value : 700,
                 reflectToAttribute : true
             },
 
-            lMinWidth : {
+            lMaxWidth : {
 
                 type : Number,
                 value : 850,
                 reflectToAttribute : true
             },
 
-            xlMinWidth : {
-
-                type : Number,
-                value : 1000,
-                reflectToAttribute : true
-            },
-
-            levelsSize : {
+            ratios : {
                 type : Array,
                 value : function() {
                     return [8.33333, 16.66667, 25, 33.33333, 41.66667, 50, 58.33333, 66.66667, 75, 83.33333, 91.66667, 100];
                 }
             },
+            
 
             screenformats : {
 
                 type : Array,
                 value : function() {
                     return ["xs", "s", "m", "l", "xl"];
-                },
-                currentScreenformat : {
-
-                    type : String
                 }
-
             },
 
-            queryMatcheXS : {
-                type : Boolean,
-                value : false,
-                observer : 'onQueryMatcheXSChanged'
-            },
-            queryMatcheS : {
-                type : Boolean,
-                value : false,
-                observer : 'onQueryMatcheSChanged'
-            },
-            queryMatcheM : {
-                type : Boolean,
-                value : false,
-                observer : 'onQueryMatcheMChanged'
-            },
-            queryMatcheL : {
-                type : Boolean,
-                value : false,
-                observer : 'onQueryMatcheLChanged'
-            },
+            currentScreenformat : {
 
-            queryMatcheXL : {
-                type : Boolean,
-                value : false,
-                observer : 'onQueryMatcheXLChanged'
-            },
-
-        },
-
-        onQueryMatcheXSChanged : function(newValue, oldValue) {
-            if (this.log)
-                console.log("iron-grid 'xs' screen");
-            this.currentScreenformat = 'xs';
-            this.applyResponsive();
-
-        },
-        onQueryMatcheSChanged : function(newValue, oldValue) {
-            if (this.log)
-                console.log("iron-grid 's' screen");
-            this.currentScreenformat = 's';
-            this.applyResponsive();
-
-        },
-        onQueryMatcheMChanged : function(newValue, oldValue) {
-            if (this.log)
-                console.log("iron-grid 'm' screen");
-            this.currentScreenformat = 'm';
-            this.applyResponsive();
-        },
-        onQueryMatcheLChanged : function(newValue, oldValue) {
-            if (this.log)
-                console.log("iron-grid 'l' screen");
-            this.currentScreenformat = 'l';
-            this.applyResponsive();
-        },
-
-        onQueryMatcheXLChanged : function(newValue, oldValue) {
-            if (this.log)
-                console.log("iron-grid 'xl' screen");
-            this.currentScreenformat = 'xl';
-            this.applyResponsive();
+                type : String
+            }
 
         },
 
         applyResponsive : function() {
 
+            console.log("applyResponsive");
+
             for (var i = 0; i < this.screenformats.length; i++) {
 
                 for (var j = 0; j < 12; j++) {
 
-                    var value = this.levelsSize[j] + '%';
+                    var value = this.ratios[j] + '%';
 
                     if (this.screenformats[i] == this.currentScreenformat) {
 
@@ -781,7 +875,8 @@ In the previous examples, we only defined the size for small screens using `s12`
                     }
 
                     this.customStyle['--iron-grid-' + this.screenformats[i] + (j + 1) + '-width'] = value;
-
+                    this.customStyle['--iron-grid-offset-' + this.screenformats[i] + (j + 1) + '-margin-left'] = value;
+                  
                 }
 
             }
@@ -790,12 +885,48 @@ In the previous examples, we only defined the size for small screens using `s12`
 
         },
 
-        resize : function(event) {
+        onResize : function(event) {
 
-          
-            console.log(event.target.offsetWidth);
-            
+            var newWidth = event.target.offsetWidth;
+
+            console.log('width : ' + newWidth);
+
+            var screenFormat = this.getScreenFormat(newWidth);
+
+            console.log("screenFormat = " + screenFormat);
+
+            if (screenFormat !== this.currentScreenformat) {
+
+                this.currentScreenformat = screenFormat;
+
+                this.applyResponsive();
+            }
         },
+
+        getScreenFormat : function(newWidth) {
+
+            if (newWidth <= this.xsMaxWidth) {
+
+                return "xs";
+
+            } else if (newWidth <= this.sMaxWidth) {
+
+                return "s";
+
+            } else if (newWidth <= this.mMaxWidth) {
+
+                return "m";
+
+            } else if (newWidth <= this.lMaxWidth) {
+
+                return "l";
+
+            } else {
+
+                return "xl";
+
+            }
+        }
     }); 
 </script>
 
