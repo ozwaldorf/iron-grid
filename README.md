@@ -67,6 +67,24 @@ You can change normal elements order appearance following screen. To order, simp
 
 ![3](https://raw.githubusercontent.com/maxiplay/iron-grid/master/img/4.png)
 
+```html
+<iron-grid>
+    <div class="s1">1</div>
+    <div class="s1">2</div>
+    <div class="s1">3</div>
+    <div class="s1">4</div>
+    <div class="s1">5</div>
+    <div class="s1">6</div>
+    <div class="s1">7</div>
+    <div class="s1">8</div>
+    <div class="s1">9</div>
+    <div class="s1">10</div>
+    <div class="s1">11</div>
+    <div class="s1 order-1-s">12</div>
+</iron-grid>
+```
+
+
 ### Hiding elements
 
 You can create hidden elements by using `s0`.
@@ -83,7 +101,7 @@ You can create hidden elements by using `s0`.
 
 Above we showed you how to layout elements using our grid system. Now we'll show you how to design your layouts so that they look great on all screen sizes.
 
-|                       | Mobile Devices &lt;= 500px | Mobile Devices &lt;= 600px | Tablet Devices &lt;= 700px | Desktop Devices &lt;= 850px | Desktop Devices &gt;= 850px |
+|                       | Mobile Devices &lt;= 500px | Mobile Devices &lt;= 600px | Tablet Devices &lt;= 700px | Desktop Devices &lt;= 850px | Desktop Devices &gt; 850px |
 |-----------------------|----------------------------|----------------------------|----------------------------|-----------------------------|-----------------------------|
 | **Class Prefix**      | .xs                        | .s                         | .m                         | .l                          | .xl                         |
 | **Number of Columns** | 12                         | 12                         | 12                         | 12                          | 12                          |
