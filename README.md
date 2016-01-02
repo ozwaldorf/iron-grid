@@ -63,6 +63,8 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 
 You can change normal elements order appearance following screen. To order, simply add `order-12-s` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number is the appearance order (from 1 to 12). Default element order is 6, so in this case the element appear after standard element.
 
+![3](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/3.png)
+
 ### Hiding elements
 
 You can create hidden elements by using `s0`.
