@@ -143,3 +143,21 @@ Note that xl is not set because it is the size above 'l' max width.
 
 Thanks to that each compoment can manage its own responsiveness and that's really cool.
 
+### Logging
+
+You can log an iron-grid during you development adding `log` on iron-grid tag. 
+
+```html
+<iron-grid log > 
+    <div class="s12">
+        <span>I am always full-width (s12)</span>
+    </div>
+    <div class="s12 m6">
+        <span>I am full-width on mobile (s12 m6)</span>
+    </div>
+</iron-grid>
+```
+Open your dev console and you will see during zomm/dezoom :
+
+width : 375
+screenFormat = s
