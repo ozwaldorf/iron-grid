@@ -161,3 +161,5 @@ Open your dev console and you will see during zomm/dezoom :
 
 width : 375
 screenFormat = s
+
+Apply logging on iron-grid one at a time. If not you will be disturb because each iron-grid can manage its screen formats
