@@ -1,6 +1,6 @@
 {
     "name": "iron-grid",
-    "version": "1.4.2",
+    "version": "2.0.0",
     "description": "Responsive Grid System for Polymer",
     "private": false,
     "authors": [
@@ -21,7 +21,8 @@
         "url": "git://github.com/The5heepDev/iron-grid"
     },
     "dependencies": {
-        "polymer": "Polymer/polymer#^1.0.0"
+        "polymer": "Polymer/polymer#^1.0.0",
+        "px10-element-resize-detector": "PX10/px10-element-resize-detector#^0.0.1",
     },
     "devDependencies": {
         "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
