@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "polymer": "Polymer/polymer#^1.0.0",
-        "px10-element-resize-detector": "maxiplay/px10-element-resize-detector#^0.0.3"
+        "px10-element-resize-detector": "maxiplay/px10-element-resize-detector#^0.0.4"
     },
     "devDependencies": {
         "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
