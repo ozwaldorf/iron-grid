@@ -63,14 +63,14 @@ To offset, simply add `offset-s2` to the class where `s` signifies the screen cl
 
 ### Orders
 
-You can change normal elements order appearance following screen. To order, simply add `order-s1` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number is the appearance order (from 1 to 12). Default element order is 6, so in this case the element appear before standard element.
+You can change the normal element's order of appearance on the screen. To do this, simply add `order-s1` to the class where `s` signifies the screen class-prefix (s = small, m = medium, l = large) and the number is the appearance order (from 1 to 12). The default element order is 6, so the page will load in order of number (ie. order-s1 order-s2 order-s3 etc.), and if there are multiple element's with the same order number, then in consecutive order, as shown below.
 
-![3](https://raw.githubusercontent.com/maxiplay/iron-grid/master/img/4.png)
+![3](https://raw.githubusercontent.com/The5heepDev/iron-grid/master/img/4.png)
 
 ```html
 <iron-grid>
     <div class="s1">1</div>
-    <div class="s1">2</div>
+    <div class="s1">2</div> // Without the order tag, the `div` will default to order-s6.
     <div class="s1">3</div>
     <div class="s1">4</div>
     <div class="s1">5</div>
@@ -126,7 +126,7 @@ In the previous examples, we only defined the size for small screens using `s12`
 ### Custom screen size format
 
 For each usage of iron-grid you can change the default screen sizes of screen format management (xs, s, m, l, xl)
-Each iron-grid instance will have its owns screen sizes.
+Each iron-grid instance will have its own screen size. Because of this, each seprate component can have it's own breakpoint.
 
 ```html
 <iron-grid xs-max-width="400" s-max-width="600" m-max-width="900" l-max-width="1150"> 
@@ -141,14 +141,12 @@ Each iron-grid instance will have its owns screen sizes.
 
 Note that xl is not set because it is the size above 'l' max width.
 
-Thanks to that each compoment can manage its own responsiveness and that's really cool.
-
 ### Logging
 
 You can log an iron-grid during you development adding `log` on iron-grid tag. 
 
 ```html
-<iron-grid log > 
+<iron-grid log> 
     <div class="s12">
         <span>I am always full-width (s12)</span>
     </div>
@@ -162,4 +160,4 @@ Open your dev console and you will see during zomm/dezoom :
 width : 375
 screenFormat = s
 
-Apply logging on iron-grid one at a time. If not you will be disturb because each iron-grid can manage its screen formats
+It is recomended to only apply logging on iron-grid one at a time. If not, you will be disturb because each iron-grid can manage its screen formats. Because of the ability for an element to have it's own breakpoints, the console may become cluttered and confusing with multiple logs.
