@@ -87,7 +87,7 @@ You can change normal elements order appearance following screen. To order, simp
 
 ### Hiding elements
 
-You can create hidden elements by using `s0`.
+You can create hidden elements by using `s0`, `m0`, or `l0`.
 
 ```html
 <iron-grid>
