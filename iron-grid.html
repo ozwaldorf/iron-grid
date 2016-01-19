@@ -1,6 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-media-query/iron-media-query.html">
-<link rel="import" href="../px10-element-resize-detector/px10-element-resize-detector.html">
+<link rel="import" href="../iron-resizable-behavior.html">
 
 <!--
 # Iron Container
@@ -2100,15 +2100,20 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
 
     </style>
     <template>
-
-        <px10-element-resize-detector target="{{}}" on-resize="onResize"></px10-element-resize-detector>
-
         <content></content>
     </template>
 </dom-module>
 <script>
     Polymer({
         is : 'iron-grid',
+        
+        behaviors: [
+	     Polymer.IronResizableBehavior
+	],
+	
+	listeners: {
+	    'iron-resize': '_onResize'
+    	},
 
         properties : {
 
@@ -2233,7 +2238,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
                 }
             }
         },
-
+        
         generateSimpleSelector : function(screen, size, prefix, suffix) {
 
             return '.' + this.constructClass(screen, size, prefix, suffix);
