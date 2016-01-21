@@ -19,9 +19,9 @@ The following custom proporties are available for styling:
 # Iron Grid
 
 `iron-grid` helps you layout polymer elements in an ordered, easy fashion. We are using a standard 12 column fluid responsive grid system.
-`iron-grid` is now designed to be used in each element you want to be responsive, not only the complete page. So if you want differents behaviors following screen size for each element, you can.
+`iron-grid` is now designed to be used in each element you want to be responsive, not only the complete page. So if you want differents behaviors following screen size for each element, you can. 
  Now each compoment can manage its own responsiveness.
-
+ 
 Please note that all the examples pictured below have the class 'example' on them. The class *is* included in the component. This class gives each grid column a 1px white border so that you can see the seperation.
 
 ### 12 Columns
@@ -106,7 +106,7 @@ You can create hidden elements by using `s0`, `m0`, or `l0`.
 
 Above we showed you how to layout elements using our grid system. Now we'll show you how to design your layouts so that they look great on all screen sizes.
 
-|                       | Mobile Devices &lt;= 500px | Mobile Devices &lt;= 600px | Tablet Devices &lt;= 700px | Desktop Devices &lt;= 850px | Desktop Devices &gt; 850px |
+|                       | Mobile Devices &lt;= 480px | Mobile Devices &lt;= 960px | Tablet Devices &lt;= 1280px | Desktop Devices &lt;= 1600px | Desktop Devices &gt; 1600px |
 |-----------------------|----------------------------|----------------------------|----------------------------|-----------------------------|-----------------------------|
 | **Class Prefix**      | .xs                        | .s                         | .m                         | .l                          | .xl                         |
 | **Number of Columns** | 12                         | 12                         | 12                         | 12                          | 12                          |
@@ -134,7 +134,7 @@ For each usage of iron-grid you can change the default screen sizes of screen fo
 Each iron-grid instance will have its own screen size. Because of this, each seprate component can have it's own breakpoint.
 
 ```html
-<iron-grid xs-max-width="400" s-max-width="600" m-max-width="900" l-max-width="1150">
+<iron-grid xs-max-width="400" s-max-width="600" m-max-width="900" l-max-width="1150"> 
     <div class="s12">
         <span>I am always full-width (s12)</span>
     </div>
@@ -148,10 +148,10 @@ Note that xl is not set because it is the size above 'l' max width.
 
 ### Logging
 
-You can log an iron-grid during you development adding `log` on iron-grid tag.
+You can log an iron-grid during you development adding `log` on iron-grid tag. 
 
 ```html
-<iron-grid log>
+<iron-grid log> 
     <div class="s12">
         <span>I am always full-width (s12)</span>
     </div>
