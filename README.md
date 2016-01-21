@@ -101,7 +101,7 @@ You can create hidden elements by using `s0`, `m0`, or `l0`.
 
 Above we showed you how to layout elements using our grid system. Now we'll show you how to design your layouts so that they look great on all screen sizes.
 
-|                       | Mobile Devices &lt;= 500px | Mobile Devices &lt;= 600px | Tablet Devices &lt;= 700px | Desktop Devices &lt;= 850px | Desktop Devices &gt; 850px |
+|                       | Mobile Devices &lt;= 480px | Mobile Devices &lt;= 960px | Tablet Devices &lt;= 1280px | Desktop Devices &lt;= 1600px | Desktop Devices &gt; 1600px |
 |-----------------------|----------------------------|----------------------------|----------------------------|-----------------------------|-----------------------------|
 | **Class Prefix**      | .xs                        | .s                         | .m                         | .l                          | .xl                         |
 | **Number of Columns** | 12                         | 12                         | 12                         | 12                          | 12                          |
