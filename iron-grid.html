@@ -177,6 +177,9 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
   <template>
     <style>
       :host {
+      
+        width: 100%;
+      
         --iron-grid-1-width: 8.33333%;
         --iron-grid-2-width: 16.66667%;
         --iron-grid-3-width: 25%;
@@ -252,6 +255,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         --iron-grid-default-style: {
           margin-left: 0;
           order: 6;
+          display : flex;
           flex-wrap: wrap;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
@@ -352,6 +356,10 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         width: var(--iron-grid-12-width);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
+      }
+        
+      ::content .xs0-important {
+        display: none !important;
       }
 
       ::content .xs1-important {
@@ -742,6 +750,10 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-element-style);
       }
 
+      ::content .s0-important {
+        display: none !important;
+      }
+
       ::content .s1-important {
         width: var(--iron-grid-1-width-important);
         @apply(--iron-grid-default-style);
@@ -1128,6 +1140,10 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         width: var(--iron-grid-12-width);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
+      }
+
+      ::content .m0-important {
+        display: none !important;
       }
 
       ::content .m1-important {
@@ -1518,6 +1534,10 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-element-style);
       }
 
+      ::content .l0-important {
+        display: none !important;
+      }
+
       ::content .l1-important {
         width: var(--iron-grid-1-width-important);
         @apply(--iron-grid-default-style);
@@ -1906,6 +1926,10 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-element-style);
       }
 
+      ::content .xl0-important {
+        display: none !important;
+      }
+
       ::content .xl1-important {
         width: var(--iron-grid-1-width-important);
         @apply(--iron-grid-default-style);
@@ -2284,7 +2308,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
           sizes: {
             type: Array,
             value: function() {
-              return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+              return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
             }
           },
 
