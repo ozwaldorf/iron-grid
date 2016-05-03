@@ -204,6 +204,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         --iron-grid-10-width-important: 83.33333% !important;
         --iron-grid-11-width-important: 91.66667% !important;
         --iron-grid-12-width-important: 100% !important;
+        --iron-grid-offset-0-margin-left: 0;
         --iron-grid-offset-1-margin-left: 8.33333%;
         --iron-grid-offset-2-margin-left: 16.66667%;
         --iron-grid-offset-3-margin-left: 25%;
@@ -216,6 +217,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         --iron-grid-offset-10-margin-left: 83.33333%;
         --iron-grid-offset-11-margin-left: 91.66667%;
         --iron-grid-offset-12-margin-left: 100%;
+        --iron-grid-offset-0-margin-left-important: 0 !important;
         --iron-grid-offset-1-margin-left-important: 8.33333% !important;
         --iron-grid-offset-2-margin-left-important: 16.66667% !important;
         --iron-grid-offset-3-margin-left-important: 25% !important;
@@ -432,6 +434,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         width: var(--iron-grid-12-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
+      }
+      
+      ::content .offset-xs0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
       ::content .offset-xs1 {
@@ -825,6 +833,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
+      
+      ::content .offset-s0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
+      }
 
       ::content .offset-s1 {
         @apply(--iron-grid-default-style);
@@ -896,6 +910,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left);
+      }
+
+      ::content .offset-s0-important {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
       ::content .offset-s1-important {
@@ -1218,6 +1238,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-element-style);
       }
 
+      ::content .offset-m0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
+      }
+
       ::content .offset-m1 {
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
@@ -1288,6 +1314,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left);
+      }
+      
+      ::content .offset-m0-important {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
       ::content .offset-m1-important {
@@ -1610,6 +1642,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-element-style);
       }
 
+      ::content .offset-l0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
+      }
+      
       ::content .offset-l1 {
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
@@ -1680,6 +1718,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left);
+      }
+
+      ::content .offset-l0-important {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
       ::content .offset-l1-important {
@@ -2002,6 +2046,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-element-style);
       }
 
+      ::content .offset-xl0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
+      }
+
       ::content .offset-xl1 {
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
@@ -2072,6 +2122,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left);
+      }
+
+      ::content .offset-xl0-important {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
       ::content .offset-xl1-important {
