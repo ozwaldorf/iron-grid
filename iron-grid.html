@@ -192,6 +192,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         --iron-grid-10-width: 83.33333%;
         --iron-grid-11-width: 91.66667%;
         --iron-grid-12-width: 100%;
+        --iron-grid-display-important: flex !important;         
         --iron-grid-1-width-important: 8.33333% !important;
         --iron-grid-2-width-important: 16.66667% !important;
         --iron-grid-3-width-important: 25% !important;
@@ -204,6 +205,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         --iron-grid-10-width-important: 83.33333% !important;
         --iron-grid-11-width-important: 91.66667% !important;
         --iron-grid-12-width-important: 100% !important;
+        --iron-grid-offset-0-margin-left: 0;
         --iron-grid-offset-1-margin-left: 8.33333%;
         --iron-grid-offset-2-margin-left: 16.66667%;
         --iron-grid-offset-3-margin-left: 25%;
@@ -216,6 +218,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         --iron-grid-offset-10-margin-left: 83.33333%;
         --iron-grid-offset-11-margin-left: 91.66667%;
         --iron-grid-offset-12-margin-left: 100%;
+        --iron-grid-offset-0-margin-left-important: 0 !important;
         --iron-grid-offset-1-margin-left-important: 8.33333% !important;
         --iron-grid-offset-2-margin-left-important: 16.66667% !important;
         --iron-grid-offset-3-margin-left-important: 25% !important;
@@ -363,75 +366,94 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
       }
 
       ::content .xs1-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs2-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs3-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs4-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs5-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs6-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs7-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs8-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs9-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs10-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs11-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xs12-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
+      }
+      
+      ::content .offset-xs0 {
+      	
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
       ::content .offset-xs1 {
@@ -755,75 +777,93 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
       }
 
       ::content .s1-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s2-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s3-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s4-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s5-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s6-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s7-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s8-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s9-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s10-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s11-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .s12-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
+      }
+      
+      ::content .offset-s0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
       ::content .offset-s1 {
@@ -896,6 +936,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left);
+      }
+
+      ::content .offset-s0-important {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
       ::content .offset-s1-important {
@@ -1147,75 +1193,93 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
       }
 
       ::content .m1-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m2-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m3-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m4-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m5-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m6-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m7-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m8-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m9-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m10-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m11-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .m12-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
+      }
+
+      ::content .offset-m0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
       ::content .offset-m1 {
@@ -1288,6 +1352,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left);
+      }
+      
+      ::content .offset-m0-important {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
       ::content .offset-m1-important {
@@ -1539,77 +1609,95 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
       }
 
       ::content .l1-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l2-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l3-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l4-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l5-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l6-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l7-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l8-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l9-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l10-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l11-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .l12-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
+      ::content .offset-l0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
+      }
+      
       ::content .offset-l1 {
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
@@ -1680,6 +1768,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left);
+      }
+
+      ::content .offset-l0-important {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
       ::content .offset-l1-important {
@@ -1931,75 +2025,93 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
       }
 
       ::content .xl1-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl2-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl3-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl4-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl5-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl6-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl7-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl8-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl9-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl10-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl11-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
       }
 
       ::content .xl12-important {
+      	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
+      }
+
+      ::content .offset-xl0 {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
       ::content .offset-xl1 {
@@ -2072,6 +2184,12 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         @apply(--iron-grid-default-style);
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left);
+      }
+
+      ::content .offset-xl0-important {
+        @apply(--iron-grid-default-style);
+        @apply(--iron-grid-element-style);
+        margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
       ::content .offset-xl1-important {
