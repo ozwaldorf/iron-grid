@@ -2497,7 +2497,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         },
 
         _onResize: function(event) {
-          var newWidth = window.innerWidth;
+          var newWidth = this.offsetWidth;
 
           if (this.log)
             console.log('width : ' + newWidth);
