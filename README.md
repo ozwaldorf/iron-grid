@@ -17,6 +17,8 @@ The following custom proporties are available for styling:
 `iron-grid` is now designed to be used in each element you want to be responsive, not only the complete page. So if you want differents behaviors following screen size for each element, you can. 
  Now each compoment can manage its own responsiveness.
  
+ `iron-grid` Is created using flexboxes.
+ 
 Please note that all the examples pictured below have the class 'example' on them. The class *is* included in the component. This class gives each grid column a 1px white border so that you can see the seperation.
 
 ### 12 Columns
