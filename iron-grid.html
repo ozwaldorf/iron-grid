@@ -2438,7 +2438,8 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
           },
 
           currentScreenformat: {
-            type: String
+            type: String,
+            notify: true
           }
         },
 
@@ -2498,6 +2499,10 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
 
         _onResize: function(event) {
           var newWidth = this.offsetWidth;
+          
+          if(newWidth == 0){
+					        newWidth = this.parentNode.clientWidth;
+					     }
 
           if (this.log)
             console.log('width : ' + newWidth);
