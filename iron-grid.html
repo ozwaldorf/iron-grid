@@ -2554,15 +2554,11 @@ Custom property | Description | Default
 <dom-module id="iron-grid-container">
   <template>
     <style>
-      :host {
-        --iron-container-width: 90%;
-      }
-
       .iron-container {
         padding: 0 1.5 rem;
         margin: 0 auto;
         max-width: 1280px;
-        width: var(--iron-container-width);
+        width: var(--iron-container-width, 90%);
       }
 
       .iron-container::content iron-grid {
