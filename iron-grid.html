@@ -2376,7 +2376,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         ],
 
         listeners: {
-          'iron-resize': '_onResize'
+          'iron-resize': 'onResize'
         },
 
         properties: {
@@ -2497,7 +2497,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
           return prefix + screen + size + suffix;
         },
 
-        _onResize: function(event) {
+        onResize: function(event) {
           var newWidth = this.offsetWidth;
           
           if(newWidth == 0){
