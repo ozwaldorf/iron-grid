@@ -166,7 +166,3 @@ width : 375
 screenFormat = s
 
 It is recomended to only apply logging on iron-grid one at a time. If not, you will be disturb because each iron-grid can manage its screen formats. Because of the ability for an element to have it's own breakpoints, the console may become cluttered and confusing with multiple logs.
-
-### Licensing
-
-Iron-Grid is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
