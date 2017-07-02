@@ -19,9 +19,9 @@ The following custom proporties are available for styling:
 # Iron Grid
 
 `iron-grid` helps you layout polymer elements in an ordered, easy fashion. We are using a standard 12 column fluid responsive grid system.
-`iron-grid` is now designed to be used in each element you want to be responsive, not only the complete page. So if you want differents behaviors following screen size for each element, you can. 
+`iron-grid` is now designed to be used in each element you want to be responsive, not only the complete page. So if you want differents behaviors following screen size for each element, you can.
  Now each compoment can manage its own responsiveness.
- 
+
 Please note that all the examples pictured below have the class 'example' on them. The class *is* included in the component. This class gives each grid column a 1px white border so that you can see the seperation.
 
 ### 12 Columns
@@ -134,7 +134,7 @@ For each usage of iron-grid you can change the default screen sizes of screen fo
 Each iron-grid instance will have its own screen size. Because of this, each seprate component can have it's own breakpoint.
 
 ```html
-<iron-grid xs-max-width="400" s-max-width="600" m-max-width="900" l-max-width="1150"> 
+<iron-grid xs-max-width="400" s-max-width="600" m-max-width="900" l-max-width="1150">
     <div class="s12">
         <span>I am always full-width (s12)</span>
     </div>
@@ -148,10 +148,10 @@ Note that xl is not set because it is the size above 'l' max width.
 
 ### Logging
 
-You can log an iron-grid during you development adding `log` on iron-grid tag. 
+You can log an iron-grid during you development adding `log` on iron-grid tag.
 
 ```html
-<iron-grid log> 
+<iron-grid log>
     <div class="s12">
         <span>I am always full-width (s12)</span>
     </div>
@@ -177,9 +177,9 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
   <template>
     <style>
       :host {
-      
+
         width: 100%;
-      
+
         --iron-grid-1-width: 8.33333%;
         --iron-grid-2-width: 16.66667%;
         --iron-grid-3-width: 25%;
@@ -192,7 +192,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         --iron-grid-10-width: 83.33333%;
         --iron-grid-11-width: 91.66667%;
         --iron-grid-12-width: 100%;
-        --iron-grid-display-important: flex !important;         
+        --iron-grid-display-important: flex !important;
         --iron-grid-1-width-important: 8.33333% !important;
         --iron-grid-2-width-important: 16.66667% !important;
         --iron-grid-3-width-important: 25% !important;
@@ -276,7 +276,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         clear: both;
       }
 
-      ::content .example {
+      ::slotted(.example) {
         border: 1px solid #eee;
         margin: 7px 0;
         text-align: center;
@@ -285,2083 +285,2083 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
         padding: 0;
       }
 
-      ::content .xs0 {
+      ::slotted(.xs0) {
         display: none;
       }
 
-      ::content .xs1 {
+      ::slotted(.xs1) {
         width: var(--iron-grid-1-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs2 {
+      ::slotted(.xs2) {
         width: var(--iron-grid-2-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs3 {
+      ::slotted(.xs3) {
         width: var(--iron-grid-3-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs4 {
+      ::slotted(.xs4) {
         width: var(--iron-grid-4-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs5 {
+      ::slotted(.xs5) {
         width: var(--iron-grid-5-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs6 {
+      ::slotted(.xs6) {
         width: var(--iron-grid-6-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs7 {
+      ::slotted(.xs7) {
         width: var(--iron-grid-7-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs8 {
+      ::slotted(.xs8) {
         width: var(--iron-grid-8-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs9 {
+      ::slotted(.xs9) {
         width: var(--iron-grid-9-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs10 {
+      ::slotted(.xs10) {
         width: var(--iron-grid-10-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs11 {
+      ::slotted(.xs11) {
         width: var(--iron-grid-11-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs12 {
+      ::slotted(.xs12) {
         width: var(--iron-grid-12-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
-        
-      ::content .xs0-important {
+
+      ::slotted(.xs0-important) {
         display: none !important;
       }
 
-      ::content .xs1-important {
+      ::slotted(.xs1-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs2-important {
+      ::slotted(.xs2-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs3-important {
+      ::slotted(.xs3-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs4-important {
+      ::slotted(.xs4-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs5-important {
+      ::slotted(.xs5-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs6-important {
+      ::slotted(.xs6-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs7-important {
+      ::slotted(.xs7-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs8-important {
+      ::slotted(.xs8-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs9-important {
+      ::slotted(.xs9-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs10-important {
+      ::slotted(.xs10-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs11-important {
+      ::slotted(.xs11-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xs12-important {
+      ::slotted(.xs12-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
-      
-      ::content .offset-xs0 {
-      	
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+
+      ::slotted(.offset-xs0) {
+
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
-      ::content .offset-xs1 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs1) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left);
       }
 
-      ::content .offset-xs2 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs2) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left);
       }
 
-      ::content .offset-xs3 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs3) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left);
       }
 
-      ::content .offset-xs4 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs4) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left);
       }
 
-      ::content .offset-xs5 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs5) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left);
       }
 
-      ::content .offset-xs6 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs6) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left);
       }
 
-      ::content .offset-xs7 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs7) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left);
       }
 
-      ::content .offset-xs8 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs8) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left);
       }
 
-      ::content .offset-xs9 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs9) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left);
       }
 
-      ::content .offset-xs10 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs10) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left);
       }
 
-      ::content .offset-xs11 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs11) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left);
       }
 
-      ::content .offset-xs12 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs12) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left);
       }
 
-      ::content .offset-xs1-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs1-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left-important);
       }
 
-      ::content .offset-xs2-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs2-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left-important);
       }
 
-      ::content .offset-xs3-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs3-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left-important);
       }
 
-      ::content .offset-xs4-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs4-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left-important);
       }
 
-      ::content .offset-xs5-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs5-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left-important);
       }
 
-      ::content .offset-xs6-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs6-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left-important);
       }
 
-      ::content .offset-xs7-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs7-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left-important);
       }
 
-      ::content .offset-xs8-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs8-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left-important);
       }
 
-      ::content .offset-xs9-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs9-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left-important);
       }
 
-      ::content .offset-xs10-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs10-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left-important);
       }
 
-      ::content .offset-xs11-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs11-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left-important);
       }
 
-      ::content .offset-xs12-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xs12-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left-important);
       }
 
-      ::content .order-xs1 {
+      ::slotted(.order-xs1) {
         order: var(--iron-grid-order-1);
       }
 
-      ::content .order-xs2 {
+      ::slotted(.order-xs2) {
         order: var(--iron-grid-order-2);
       }
 
-      ::content .order-xs3 {
+      ::slotted(.order-xs3) {
         order: var(--iron-grid-order-3);
       }
 
-      ::content .order-xs4 {
+      ::slotted(.order-xs4) {
         order: var(--iron-grid-order-4);
       }
 
-      ::content .order-xs5 {
+      ::slotted(.order-xs5) {
         order: var(--iron-grid-order-5);
       }
 
-      ::content .order-xs6 {
+      ::slotted(.order-xs6) {
         order: var(--iron-grid-order-6);
       }
 
-      ::content .order-xs7 {
+      ::slotted(.order-xs7) {
         order: var(--iron-grid-order-7);
       }
 
-      ::content .order-xs8 {
+      ::slotted(.order-xs8) {
         order: var(--iron-grid-order-8);
       }
 
-      ::content .order-xs9 {
+      ::slotted(.order-xs9) {
         order: var(--iron-grid-order-9);
       }
 
-      ::content .order-xs10 {
+      ::slotted(.order-xs10) {
         order: var(--iron-grid-order-10);
       }
 
-      ::content .order-xs11 {
+      ::slotted(.order-xs11) {
         order: var(--iron-grid-order-11);
       }
 
-      ::content .order-xs12 {
+      ::slotted(.order-xs12) {
         order: var(--iron-grid-order-12);
       }
 
-      ::content .order-xs1-important {
+      ::slotted(.order-xs1-important) {
         order: var(--iron-grid-order-1-important);
       }
 
-      ::content .order-xs2-important {
+      ::slotted(.order-xs2-important) {
         order: var(--iron-grid-order-2-important);
       }
 
-      ::content .order-xs3-important {
+      ::slotted(.order-xs3-important) {
         order: var(--iron-grid-order-3-important);
       }
 
-      ::content .order-xs4-important {
+      ::slotted(.order-xs4-important) {
         order: var(--iron-grid-order-4-important);
       }
 
-      ::content .order-xs5-important {
+      ::slotted(.order-xs5-important) {
         order: var(--iron-grid-order-5-important);
       }
 
-      ::content .order-xs6-important {
+      ::slotted(.order-xs6-important) {
         order: var(--iron-grid-order-6-important);
       }
 
-      ::content .order-xs7-important {
+      ::slotted(.order-xs7-important) {
         order: var(--iron-grid-order-7-important);
       }
 
-      ::content .order-xs8-important {
+      ::slotted(.order-xs8-important) {
         order: var(--iron-grid-order-8-important);
       }
 
-      ::content .order-xs9-important {
+      ::slotted(.order-xs9-important) {
         order: var(--iron-grid-order-9-important);
       }
 
-      ::content .order-xs10-important {
+      ::slotted(.order-xs10-important) {
         order: var(--iron-grid-order-10-important);
       }
 
-      ::content .order-xs11-important {
+      ::slotted(.order-xs11-important) {
         order: var(--iron-grid-order-11-important);
       }
 
-      ::content .order-xs12-important {
+      ::slotted(.order-xs12-important) {
         order: var(--iron-grid-order-12-important);
       }
 
-      ::content .s0 {
+      ::slotted(.s0) {
         display: none;
       }
 
-      ::content .s1 {
+      ::slotted(.s1) {
         width: var(--iron-grid-1-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s2 {
+      ::slotted(.s2) {
         width: var(--iron-grid-2-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s3 {
+      ::slotted(.s3) {
         width: var(--iron-grid-3-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s4 {
+      ::slotted(.s4) {
         width: var(--iron-grid-4-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s5 {
+      ::slotted(.s5) {
         width: var(--iron-grid-5-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s6 {
+      ::slotted(.s6) {
         width: var(--iron-grid-6-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s7 {
+      ::slotted(.s7) {
         width: var(--iron-grid-7-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s8 {
+      ::slotted(.s8) {
         width: var(--iron-grid-8-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s9 {
+      ::slotted(.s9) {
         width: var(--iron-grid-9-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s10 {
+      ::slotted(.s10) {
         width: var(--iron-grid-10-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s11 {
+      ::slotted(.s11) {
         width: var(--iron-grid-11-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s12 {
+      ::slotted(.s12) {
         width: var(--iron-grid-12-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s0-important {
+      ::slotted(.s0-important) {
         display: none !important;
       }
 
-      ::content .s1-important {
+      ::slotted(.s1-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s2-important {
+      ::slotted(.s2-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s3-important {
+      ::slotted(.s3-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s4-important {
+      ::slotted(.s4-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s5-important {
+      ::slotted(.s5-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s6-important {
+      ::slotted(.s6-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s7-important {
+      ::slotted(.s7-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s8-important {
+      ::slotted(.s8-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s9-important {
+      ::slotted(.s9-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s10-important {
+      ::slotted(.s10-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s11-important {
+      ::slotted(.s11-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .s12-important {
+      ::slotted(.s12-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
-      
-      ::content .offset-s0 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+
+      ::slotted(.offset-s0) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
-      ::content .offset-s1 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s1) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left);
       }
 
-      ::content .offset-s2 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s2) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left);
       }
 
-      ::content .offset-s3 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s3) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left);
       }
 
-      ::content .offset-s4 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s4) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left);
       }
 
-      ::content .offset-s5 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s5) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left);
       }
 
-      ::content .offset-s6 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s6) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left);
       }
 
-      ::content .offset-s7 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s7) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left);
       }
 
-      ::content .offset-s8 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s8) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left);
       }
 
-      ::content .offset-s9 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s9) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left);
       }
 
-      ::content .offset-s10 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s10) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left);
       }
 
-      ::content .offset-s11 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s11) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left);
       }
 
-      ::content .offset-s12 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s12) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left);
       }
 
-      ::content .offset-s0-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s0-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
-      ::content .offset-s1-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s1-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left-important);
       }
 
-      ::content .offset-s2-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s2-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left-important);
       }
 
-      ::content .offset-s3-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s3-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left-important);
       }
 
-      ::content .offset-s4-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s4-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left-important);
       }
 
-      ::content .offset-s5-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s5-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left-important);
       }
 
-      ::content .offset-s6-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s6-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left-important);
       }
 
-      ::content .offset-s7-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s7-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left-important);
       }
 
-      ::content .offset-s8-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s8-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left-important);
       }
 
-      ::content .offset-s9-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s9-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left-important);
       }
 
-      ::content .offset-s10-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s10-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left-important);
       }
 
-      ::content .offset-s11-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s11-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left-important);
       }
 
-      ::content .offset-s12-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-s12-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left-important);
       }
 
-      ::content .order-s1 {
+      ::slotted(.order-s1) {
         order: var(--iron-grid-order-1);
       }
 
-      ::content .order-s2 {
+      ::slotted(.order-s2) {
         order: var(--iron-grid-order-2);
       }
 
-      ::content .order-s3 {
+      ::slotted(.order-s3) {
         order: var(--iron-grid-order-3);
       }
 
-      ::content .order-s4 {
+      ::slotted(.order-s4) {
         order: var(--iron-grid-order-4);
       }
 
-      ::content .order-s5 {
+      ::slotted(.order-s5) {
         order: var(--iron-grid-order-5);
       }
 
-      ::content .order-s6 {
+      ::slotted(.order-s6) {
         order: var(--iron-grid-order-6);
       }
 
-      ::content .order-s7 {
+      ::slotted(.order-s7) {
         order: var(--iron-grid-order-7);
       }
 
-      ::content .order-s8 {
+      ::slotted(.order-s8) {
         order: var(--iron-grid-order-8);
       }
 
-      ::content .order-s9 {
+      ::slotted(.order-s9) {
         order: var(--iron-grid-order-9);
       }
 
-      ::content .order-s10 {
+      ::slotted(.order-s10) {
         order: var(--iron-grid-order-10);
       }
 
-      ::content .order-s11 {
+      ::slotted(.order-s11) {
         order: var(--iron-grid-order-11);
       }
 
-      ::content .order-s12 {
+      ::slotted(.order-s12) {
         order: var(--iron-grid-order-12);
       }
 
-      ::content .order-s1-important {
+      ::slotted(.order-s1-important) {
         order: var(--iron-grid-order-1-important);
       }
 
-      ::content .order-s2-important {
+      ::slotted(.order-s2-important) {
         order: var(--iron-grid-order-2-important);
       }
 
-      ::content .order-s3-important {
+      ::slotted(.order-s3-important) {
         order: var(--iron-grid-order-3-important);
       }
 
-      ::content .order-s4-important {
+      ::slotted(.order-s4-important) {
         order: var(--iron-grid-order-4-important);
       }
 
-      ::content .order-s5-important {
+      ::slotted(.order-s5-important) {
         order: var(--iron-grid-order-5-important);
       }
 
-      ::content .order-s6-important {
+      ::slotted(.order-s6-important) {
         order: var(--iron-grid-order-6-important);
       }
 
-      ::content .order-s7-important {
+      ::slotted(.order-s7-important) {
         order: var(--iron-grid-order-7-important);
       }
 
-      ::content .order-s8-important {
+      ::slotted(.order-s8-important) {
         order: var(--iron-grid-order-8-important);
       }
 
-      ::content .order-s9-important {
+      ::slotted(.order-s9-important) {
         order: var(--iron-grid-order-9-important);
       }
 
-      ::content .order-s10-important {
+      ::slotted(.order-s10-important) {
         order: var(--iron-grid-order-10-important);
       }
 
-      ::content .order-s11-important {
+      ::slotted(.order-s11-important) {
         order: var(--iron-grid-order-11-important);
       }
 
-      ::content .order-s12-important {
+      ::slotted(.order-s12-important) {
         order: var(--iron-grid-order-12-important);
       }
 
-      ::content .m0 {
+      ::slotted(.m0) {
         display: none;
       }
 
-      ::content .m1 {
+      ::slotted(.m1) {
         width: var(--iron-grid-1-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m2 {
+      ::slotted(.m2) {
         width: var(--iron-grid-2-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m3 {
+      ::slotted(.m3) {
         width: var(--iron-grid-3-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m4 {
+      ::slotted(.m4) {
         width: var(--iron-grid-4-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m5 {
+      ::slotted(.m5) {
         width: var(--iron-grid-5-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m6 {
+      ::slotted(.m6) {
         width: var(--iron-grid-6-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m7 {
+      ::slotted(.m7) {
         width: var(--iron-grid-7-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m8 {
+      ::slotted(.m8) {
         width: var(--iron-grid-8-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m9 {
+      ::slotted(.m9) {
         width: var(--iron-grid-9-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m10 {
+      ::slotted(.m10) {
         width: var(--iron-grid-10-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m11 {
+      ::slotted(.m11) {
         width: var(--iron-grid-11-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m12 {
+      ::slotted(.m12) {
         width: var(--iron-grid-12-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m0-important {
+      ::slotted(.m0-important) {
         display: none !important;
       }
 
-      ::content .m1-important {
+      ::slotted(.m1-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m2-important {
+      ::slotted(.m2-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m3-important {
+      ::slotted(.m3-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m4-important {
+      ::slotted(.m4-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m5-important {
+      ::slotted(.m5-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m6-important {
+      ::slotted(.m6-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m7-important {
+      ::slotted(.m7-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m8-important {
+      ::slotted(.m8-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m9-important {
+      ::slotted(.m9-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m10-important {
+      ::slotted(.m10-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m11-important {
+      ::slotted(.m11-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .m12-important {
+      ::slotted(.m12-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .offset-m0 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m0) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
-      ::content .offset-m1 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m1) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left);
       }
 
-      ::content .offset-m2 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m2) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left);
       }
 
-      ::content .offset-m3 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m3) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left);
       }
 
-      ::content .offset-m4 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m4) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left);
       }
 
-      ::content .offset-m5 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m5) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left);
       }
 
-      ::content .offset-m6 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m6) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left);
       }
 
-      ::content .offset-m7 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m7) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left);
       }
 
-      ::content .offset-m8 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m8) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left);
       }
 
-      ::content .offset-m9 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m9) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left);
       }
 
-      ::content .offset-m10 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m10) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left);
       }
 
-      ::content .offset-m11 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m11) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left);
       }
 
-      ::content .offset-m12 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m12) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left);
       }
-      
-      ::content .offset-m0-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+
+      ::slotted(.offset-m0-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
-      ::content .offset-m1-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m1-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left-important);
       }
 
-      ::content .offset-m2-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m2-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left-important);
       }
 
-      ::content .offset-m3-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m3-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left-important);
       }
 
-      ::content .offset-m4-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m4-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left-important);
       }
 
-      ::content .offset-m5-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m5-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left-important);
       }
 
-      ::content .offset-m6-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m6-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left-important);
       }
 
-      ::content .offset-m7-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m7-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left-important);
       }
 
-      ::content .offset-m8-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m8-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left-important);
       }
 
-      ::content .offset-m9-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m9-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left-important);
       }
 
-      ::content .offset-m10-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m10-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left-important);
       }
 
-      ::content .offset-m11-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m11-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left-important);
       }
 
-      ::content .offset-m12-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-m12-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left-important);
       }
 
-      ::content .order-m1 {
+      ::slotted(.order-m1) {
         order: var(--iron-grid-order-1);
       }
 
-      ::content .order-m2 {
+      ::slotted(.order-m2) {
         order: var(--iron-grid-order-2);
       }
 
-      ::content .order-m3 {
+      ::slotted(.order-m3) {
         order: var(--iron-grid-order-3);
       }
 
-      ::content .order-m4 {
+      ::slotted(.order-m4) {
         order: var(--iron-grid-order-4);
       }
 
-      ::content .order-m5 {
+      ::slotted(.order-m5) {
         order: var(--iron-grid-order-5);
       }
 
-      ::content .order-m6 {
+      ::slotted(.order-m6) {
         order: var(--iron-grid-order-6);
       }
 
-      ::content .order-m7 {
+      ::slotted(.order-m7) {
         order: var(--iron-grid-order-7);
       }
 
-      ::content .order-m8 {
+      ::slotted(.order-m8) {
         order: var(--iron-grid-order-8);
       }
 
-      ::content .order-m9 {
+      ::slotted(.order-m9) {
         order: var(--iron-grid-order-9);
       }
 
-      ::content .order-m10 {
+      ::slotted(.order-m10) {
         order: var(--iron-grid-order-10);
       }
 
-      ::content .order-m11 {
+      ::slotted(.order-m11) {
         order: var(--iron-grid-order-11);
       }
 
-      ::content .order-m12 {
+      ::slotted(.order-m12) {
         order: var(--iron-grid-order-12);
       }
 
-      ::content .order-m1-important {
+      ::slotted(.order-m1-important) {
         order: var(--iron-grid-order-1-important);
       }
 
-      ::content .order-m2-important {
+      ::slotted(.order-m2-important) {
         order: var(--iron-grid-order-2-important);
       }
 
-      ::content .order-m3-important {
+      ::slotted(.order-m3-important) {
         order: var(--iron-grid-order-3-important);
       }
 
-      ::content .order-m4-important {
+      ::slotted(.order-m4-important) {
         order: var(--iron-grid-order-4-important);
       }
 
-      ::content .order-m5-important {
+      ::slotted(.order-m5-important) {
         order: var(--iron-grid-order-5-important);
       }
 
-      ::content .order-m6-important {
+      ::slotted(.order-m6-important) {
         order: var(--iron-grid-order-6-important);
       }
 
-      ::content .order-m7-important {
+      ::slotted(.order-m7-important) {
         order: var(--iron-grid-order-7-important);
       }
 
-      ::content .order-m8-important {
+      ::slotted(.order-m8-important) {
         order: var(--iron-grid-order-8-important);
       }
 
-      ::content .order-m9-important {
+      ::slotted(.order-m9-important) {
         order: var(--iron-grid-order-9-important);
       }
 
-      ::content .order-m10-important {
+      ::slotted(.order-m10-important) {
         order: var(--iron-grid-order-10-important);
       }
 
-      ::content .order-m11-important {
+      ::slotted(.order-m11-important) {
         order: var(--iron-grid-order-11-important);
       }
 
-      ::content .order-m12-important {
+      ::slotted(.order-m12-important) {
         order: var(--iron-grid-order-12-important);
       }
 
-      ::content .l0 {
+      ::slotted(.l0) {
         display: none;
       }
 
-      ::content .l1 {
+      ::slotted(.l1) {
         width: var(--iron-grid-1-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l2 {
+      ::slotted(.l2) {
         width: var(--iron-grid-2-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l3 {
+      ::slotted(.l3) {
         width: var(--iron-grid-3-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l4 {
+      ::slotted(.l4) {
         width: var(--iron-grid-4-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l5 {
+      ::slotted(.l5) {
         width: var(--iron-grid-5-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l6 {
+      ::slotted(.l6) {
         width: var(--iron-grid-6-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l7 {
+      ::slotted(.l7) {
         width: var(--iron-grid-7-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l8 {
+      ::slotted(.l8) {
         width: var(--iron-grid-8-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l9 {
+      ::slotted(.l9) {
         width: var(--iron-grid-9-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l10 {
+      ::slotted(.l10) {
         width: var(--iron-grid-10-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l11 {
+      ::slotted(.l11) {
         width: var(--iron-grid-11-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l12 {
+      ::slotted(.l12) {
         width: var(--iron-grid-12-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l0-important {
+      ::slotted(.l0-important) {
         display: none !important;
       }
 
-      ::content .l1-important {
+      ::slotted(.l1-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l2-important {
+      ::slotted(.l2-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l3-important {
+      ::slotted(.l3-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l4-important {
+      ::slotted(.l4-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l5-important {
+      ::slotted(.l5-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l6-important {
+      ::slotted(.l6-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l7-important {
+      ::slotted(.l7-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l8-important {
+      ::slotted(.l8-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l9-important {
+      ::slotted(.l9-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l10-important {
+      ::slotted(.l10-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l11-important {
+      ::slotted(.l11-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .l12-important {
+      ::slotted(.l12-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .offset-l0 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l0) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left);
       }
-      
-      ::content .offset-l1 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+
+      ::slotted(.offset-l1) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left);
       }
 
-      ::content .offset-l2 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l2) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left);
       }
 
-      ::content .offset-l3 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l3) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left);
       }
 
-      ::content .offset-l4 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l4) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left);
       }
 
-      ::content .offset-l5 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l5) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left);
       }
 
-      ::content .offset-l6 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l6) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left);
       }
 
-      ::content .offset-l7 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l7) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left);
       }
 
-      ::content .offset-l8 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l8) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left);
       }
 
-      ::content .offset-l9 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l9) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left);
       }
 
-      ::content .offset-l10 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l10) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left);
       }
 
-      ::content .offset-l11 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l11) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left);
       }
 
-      ::content .offset-l12 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l12) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left);
       }
 
-      ::content .offset-l0-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l0-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
-      ::content .offset-l1-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l1-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left-important);
       }
 
-      ::content .offset-l2-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l2-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left-important);
       }
 
-      ::content .offset-l3-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l3-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left-important);
       }
 
-      ::content .offset-l4-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l4-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left-important);
       }
 
-      ::content .offset-l5-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l5-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left-important);
       }
 
-      ::content .offset-l6-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l6-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left-important);
       }
 
-      ::content .offset-l7-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l7-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left-important);
       }
 
-      ::content .offset-l8-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l8-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left-important);
       }
 
-      ::content .offset-l9-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l9-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left-important);
       }
 
-      ::content .offset-l10-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l10-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left-important);
       }
 
-      ::content .offset-l11-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l11-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left-important);
       }
 
-      ::content .offset-l12-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-l12-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left-important);
       }
 
-      ::content .order-l1 {
+      ::slotted(.order-l1) {
         order: var(--iron-grid-order-1);
       }
 
-      ::content .order-l2 {
+      ::slotted(.order-l2) {
         order: var(--iron-grid-order-2);
       }
 
-      ::content .order-l3 {
+      ::slotted(.order-l3) {
         order: var(--iron-grid-order-3);
       }
 
-      ::content .order-l4 {
+      ::slotted(.order-l4) {
         order: var(--iron-grid-order-4);
       }
 
-      ::content .order-l5 {
+      ::slotted(.order-l5) {
         order: var(--iron-grid-order-5);
       }
 
-      ::content .order-l6 {
+      ::slotted(.order-l6) {
         order: var(--iron-grid-order-6);
       }
 
-      ::content .order-l7 {
+      ::slotted(.order-l7) {
         order: var(--iron-grid-order-7);
       }
 
-      ::content .order-l8 {
+      ::slotted(.order-l8) {
         order: var(--iron-grid-order-8);
       }
 
-      ::content .order-l9 {
+      ::slotted(.order-l9) {
         order: var(--iron-grid-order-9);
       }
 
-      ::content .order-l10 {
+      ::slotted(.order-l10) {
         order: var(--iron-grid-order-10);
       }
 
-      ::content .order-l11 {
+      ::slotted(.order-l11) {
         order: var(--iron-grid-order-11);
       }
 
-      ::content .order-l12 {
+      ::slotted(.order-l12) {
         order: var(--iron-grid-order-12);
       }
 
-      ::content .order-l1-important {
+      ::slotted(.order-l1-important) {
         order: var(--iron-grid-order-1-important);
       }
 
-      ::content .order-l2-important {
+      ::slotted(.order-l2-important) {
         order: var(--iron-grid-order-2-important);
       }
 
-      ::content .order-l3-important {
+      ::slotted(.order-l3-important) {
         order: var(--iron-grid-order-3-important);
       }
 
-      ::content .order-l4-important {
+      ::slotted(.order-l4-important) {
         order: var(--iron-grid-order-4-important);
       }
 
-      ::content .order-l5-important {
+      ::slotted(.order-l5-important) {
         order: var(--iron-grid-order-5-important);
       }
 
-      ::content .order-l6-important {
+      ::slotted(.order-l6-important) {
         order: var(--iron-grid-order-6-important);
       }
 
-      ::content .order-l7-important {
+      ::slotted(.order-l7-important) {
         order: var(--iron-grid-order-7-important);
       }
 
-      ::content .order-l8-important {
+      ::slotted(.order-l8-important) {
         order: var(--iron-grid-order-8-important);
       }
 
-      ::content .order-l9-important {
+      ::slotted(.order-l9-important) {
         order: var(--iron-grid-order-9-important);
       }
 
-      ::content .order-l10-important {
+      ::slotted(.order-l10-important) {
         order: var(--iron-grid-order-10-important);
       }
 
-      ::content .order-l11-important {
+      ::slotted(.order-l11-important) {
         order: var(--iron-grid-order-11-important);
       }
 
-      ::content .order-l12-important {
+      ::slotted(.order-l12-important) {
         order: var(--iron-grid-order-12-important);
       }
 
-      ::content .xl0 {
+      ::slotted(.xl0) {
         display: none;
       }
 
-      ::content .xl1 {
+      ::slotted(.xl1) {
         width: var(--iron-grid-1-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl2 {
+      ::slotted(.xl2) {
         width: var(--iron-grid-2-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl3 {
+      ::slotted(.xl3) {
         width: var(--iron-grid-3-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl4 {
+      ::slotted(.xl4) {
         width: var(--iron-grid-4-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl5 {
+      ::slotted(.xl5) {
         width: var(--iron-grid-5-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl6 {
+      ::slotted(.xl6) {
         width: var(--iron-grid-6-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl7 {
+      ::slotted(.xl7) {
         width: var(--iron-grid-7-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl8 {
+      ::slotted(.xl8) {
         width: var(--iron-grid-8-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl9 {
+      ::slotted(.xl9) {
         width: var(--iron-grid-9-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl10 {
+      ::slotted(.xl10) {
         width: var(--iron-grid-10-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl11 {
+      ::slotted(.xl11) {
         width: var(--iron-grid-11-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl12 {
+      ::slotted(.xl12) {
         width: var(--iron-grid-12-width);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl0-important {
+      ::slotted(.xl0-important) {
         display: none !important;
       }
 
-      ::content .xl1-important {
+      ::slotted(.xl1-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-1-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl2-important {
+      ::slotted(.xl2-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-2-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl3-important {
+      ::slotted(.xl3-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-3-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl4-important {
+      ::slotted(.xl4-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-4-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl5-important {
+      ::slotted(.xl5-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-5-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl6-important {
+      ::slotted(.xl6-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-6-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl7-important {
+      ::slotted(.xl7-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-7-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl8-important {
+      ::slotted(.xl8-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-8-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl9-important {
+      ::slotted(.xl9-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-9-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl10-important {
+      ::slotted(.xl10-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-10-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl11-important {
+      ::slotted(.xl11-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-11-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .xl12-important {
+      ::slotted(.xl12-important) {
       	display : var(--iron-grid-display-important);
         width: var(--iron-grid-12-width-important);
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
       }
 
-      ::content .offset-xl0 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl0) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left);
       }
 
-      ::content .offset-xl1 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl1) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left);
       }
 
-      ::content .offset-xl2 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl2) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left);
       }
 
-      ::content .offset-xl3 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl3) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left);
       }
 
-      ::content .offset-xl4 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl4) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left);
       }
 
-      ::content .offset-xl5 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl5) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left);
       }
 
-      ::content .offset-xl6 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl6) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left);
       }
 
-      ::content .offset-xl7 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl7) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left);
       }
 
-      ::content .offset-xl8 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl8) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left);
       }
 
-      ::content .offset-xl9 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl9) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left);
       }
 
-      ::content .offset-xl10 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl10) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left);
       }
 
-      ::content .offset-xl11 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl11) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left);
       }
 
-      ::content .offset-xl12 {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl12) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-12-margin-left);
       }
 
-      ::content .offset-xl0-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl0-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-0-margin-left-important);
       }
 
-      ::content .offset-xl1-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl1-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-1-margin-left-important);
       }
 
-      ::content .offset-xl2-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl2-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-2-margin-left-important);
       }
 
-      ::content .offset-xl3-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl3-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-3-margin-left-important);
       }
 
-      ::content .offset-xl4-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl4-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-4-margin-left-important);
       }
 
-      ::content .offset-xl5-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl5-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-5-margin-left-important);
       }
 
-      ::content .offset-xl6-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl6-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-6-margin-left-important);
       }
 
-      ::content .offset-xl7-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl7-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-7-margin-left-important);
       }
 
-      ::content .offset-xl8-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl8-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-8-margin-left-important);
       }
 
-      ::content .offset-xl9-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl9-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-9-margin-left-important);
       }
 
-      ::content .offset-xl10-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl10-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-10-margin-left-important);
       }
 
-      ::content .offset-xl11-important {
-        @apply(--iron-grid-default-style);
-        @apply(--iron-grid-element-style);
+      ::slotted(.offset-xl11-important) {
+        @apply --iron-grid-default-style;
+        @apply --iron-grid-element-style;
         margin-left: var(--iron-grid-offset-11-margin-left-important);
       }
 
-      ::content .offset-xl12-important {
-        @apply(--iron-grid-default-style);
+      ::slotted(.offset-xl12-important) {
+        @apply --iron-grid-default-style;
         @apply(--iron-grid-element-style);
         margin-left: var(--iron-grid-offset-12-margin-left-important);
       }
 
-      ::content .order-xl1 {
+      ::slotted(.order-xl1) {
         order: var(--iron-grid-order-1);
       }
 
-      ::content .order-xl2 {
+      ::slotted(.order-xl2) {
         order: var(--iron-grid-order-2);
       }
 
-      ::content .order-xl3 {
+      ::slotted(.order-xl3) {
         order: var(--iron-grid-order-3);
       }
 
-      ::content .order-xl4 {
+      ::slotted(.order-xl4) {
         order: var(--iron-grid-order-4);
       }
 
-      ::content .order-xl5 {
+      ::slotted(.order-xl5) {
         order: var(--iron-grid-order-5);
       }
 
-      ::content .order-xl6 {
+      ::slotted(.order-xl6) {
         order: var(--iron-grid-order-6);
       }
 
-      ::content .order-xl7 {
+      ::slotted(.order-xl7) {
         order: var(--iron-grid-order-7);
       }
 
-      ::content .order-xl8 {
+      ::slotted(.order-xl8) {
         order: var(--iron-grid-order-8);
       }
 
-      ::content .order-xl9 {
+      ::slotted(.order-xl9) {
         order: var(--iron-grid-order-9);
       }
 
-      ::content .order-xl10 {
+      ::slotted(.order-xl10) {
         order: var(--iron-grid-order-10);
       }
 
-      ::content .order-xl11 {
+      ::slotted(.order-xl11) {
         order: var(--iron-grid-order-11);
       }
 
-      ::content .order-xl12 {
+      ::slotted(.order-xl12) {
         order: var(--iron-grid-order-12);
       }
 
-      ::content .order-xl1-important {
+      ::slotted(.order-xl1-important) {
         order: var(--iron-grid-order-1-important);
       }
 
-      ::content .order-xl2-important {
+      ::slotted(.order-xl2-important) {
         order: var(--iron-grid-order-2-important);
       }
 
-      ::content .order-xl3-important {
+      ::slotted(.order-xl3-important) {
         order: var(--iron-grid-order-3-important);
       }
 
-      ::content .order-xl4-important {
+      ::slotted(.order-xl4-important) {
         order: var(--iron-grid-order-4-important);
       }
 
-      ::content .order-xl5-important {
+      ::slotted(.order-xl5-important) {
         order: var(--iron-grid-order-5-important);
       }
 
-      ::content .order-xl6-important {
+      ::slotted(.order-xl6-important) {
         order: var(--iron-grid-order-6-important);
       }
 
-      ::content .order-xl7-important {
+      ::slotted(.order-xl7-important) {
         order: var(--iron-grid-order-7-important);
       }
 
-      ::content .order-xl8-important {
+      ::slotted(.order-xl8-important) {
         order: var(--iron-grid-order-8-important);
       }
 
-      ::content .order-xl9-important {
+      ::slotted(.order-xl9-important) {
         order: var(--iron-grid-order-9-important);
       }
 
-      ::content .order-xl10-important {
+      ::slotted(.order-xl10-important) {
         order: var(--iron-grid-order-10-important);
       }
 
-      ::content .order-xl11-important {
+      ::slotted(.order-xl11-important) {
         order: var(--iron-grid-order-11-important);
       }
 
-      ::content .order-xl12-important {
+      ::slotted(.order-xl12-important) {
         order: var(--iron-grid-order-12-important);
       }
     </style>
 
-    <content></content>
+    <slot></slot>
   </template>
 
   <script>
@@ -2499,7 +2499,7 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
 
         onResize: function(event) {
           var newWidth = this.offsetWidth;
-          
+
           if(newWidth == 0){
 					        newWidth = this.parentNode.clientWidth;
 					     }
@@ -2560,15 +2560,15 @@ Custom property | Description | Default
         max-width: var(--iron-container-max-width, 1280px);
         width: var(--iron-container-width, 90%);
       }
-
-      .iron-container::content iron-grid {
+      
+      .iron-container::slotted(iron-grid) {
         margin-left: -0.75rem;
         margin-right: -0.75rem;
       }
     </style>
 
     <div class="iron-container">
-      <content></content>
+      <slot></slot>
     </div>
   </template>
   <script>
