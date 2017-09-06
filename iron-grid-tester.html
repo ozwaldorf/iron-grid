@@ -1,0 +1,188 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="iron-grid.html">
+
+<dom-module id="iron-grid-tester">
+    <template>
+        <style>
+			:host {
+
+				/*color : red;*/
+			}
+
+			.example {
+
+				border-style: solid;
+				border-color: black;
+				padding: 0 0.75 rem;
+			}
+
+			.red {
+				background-color: #F44336 !important;
+			}
+
+			.pink {
+				background-color: #e91e63 !important;
+			}
+
+			.purple {
+				background-color: #9c27b0 !important;
+			}
+
+			.indigo {
+				background-color: #3f51b5 !important;
+			}
+
+			.blue {
+				background-color: #2196F3 !important;
+			}
+
+			.cyan {
+				background-color: #00bcd4 !important;
+			}
+
+			.teal {
+				background-color: #009688 !important;
+			}
+
+			.green {
+				background-color: #4CAF50 !important;
+			}
+
+			.lime {
+				background-color: #cddc39 !important;
+			}
+
+        </style>
+        <h1> Current Screen Format = {{currentScreenformat}} </h1>
+
+        <iron-grid current-screenformat="{{currentScreenformat}}" log>
+
+            <div class="xs12">
+                <div class="s12 m6 l3 example purple">
+
+                    s12 m6 l3
+
+                </div>
+                <div class="s12 m6 l3 example purple">
+
+                    s12 m6 l3
+
+                </div>
+                <div class="s12 m6 l3 example purple">
+
+                    s12 m6 l3
+
+                </div>
+                <div class="s12 m6 l3 example purple">
+
+                    s12 m6 l3
+
+                </div>
+            </div>
+
+            <div class="s12">
+                <h3>Hide elements</h3>
+            </div>
+
+            <div class="xs0 s12 example green">
+                xs0 s12  (The Rightmost screen format is taken in account if the current screen format is not managed)
+            </div>
+
+            <div class="s12">
+                <h3>Distinguish size following screen</h3>
+            </div>
+
+            <div class="xs12">
+                <div class="s12 m3 l2 example blue">
+
+                    s12 m3 l2
+
+                </div>
+                <div class="s12 m6 l8 example blue">
+
+                    s12 m6 l8
+
+                </div>
+                <div class="s12 m3 l2 example blue">
+
+                    s12 m3 l2
+
+                </div>
+            </div>
+
+            <div class="s12">
+                <h3>Shift elements</h3>
+            </div>
+
+            <div class="xs3 offset-xs0 offset-s3 offset-m6 offset-l9  example teal">
+
+                xs3 offset-s3 offset-m6 offset-l9 (Offset class need to be after the size class)
+
+            </div>
+
+            <div class="s12">
+                <h3>Ordering elements</h3>
+            </div>
+
+            <div class="s12">
+                <div class="s1 example red">
+                    1
+                </div>
+                <div class="s1 example red">
+                    2
+                </div>
+            
+                <div class="s1 example red">
+                    3
+                </div>
+                <div class="s1 example red">
+                    4
+                </div>
+                <div class="s1 example red">
+                    5
+                </div>
+                <div class="s1 example red">
+                    6
+                </div>
+                <div class="s1 example red">
+                    7
+                </div>
+                <div class="s1 example red">
+                    8
+                </div>
+                <div class="s1 example red">
+                    9
+                </div>
+                <div class="s1 example red">
+                    10
+                </div>
+                <div class="s1 example red">
+                    11
+                </div>
+                <div class="s1 order-s1 example red">
+                    12 order-s1
+                </div>
+            </div>
+        </iron-grid>
+
+    </template>
+    <script>
+		class IronGridTester extends
+		Polymer.Element {
+			static get
+			is() {
+				return 'iron-grid-tester'
+			}
+
+			static get
+			properties() {
+				return {
+
+				}
+			}
+
+		}
+
+		customElements.define(IronGridTester.is, IronGridTester);
+    </script>
+</dom-module>
