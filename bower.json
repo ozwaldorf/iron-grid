@@ -1,6 +1,6 @@
 {
     "name": "iron-grid",
-    "version": "3.5.3",
+    "version": "4.0.0",
     "description": "Responsive Grid System for Polymer",
     "private": false,
     "authors": [
@@ -21,12 +21,12 @@
         "url": "git://github.com/The5heepDev/iron-grid"
     },
     "dependencies": {
-        "polymer": "Polymer/polymer#^1.0.0",
-        "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^1.0.2"
+        "polymer": "Polymer/polymer#^2.0.0",
+        "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^2.0.1"
     },
     "devDependencies": {
-        "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+        "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
         "web-component-tester": "*",
-        "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^v1.0.2"
     }
 }
