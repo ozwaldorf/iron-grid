@@ -1,32 +1,33 @@
 {
-    "name": "iron-grid",
-    "version": "4.0.0",
-    "description": "Responsive Grid System for Polymer",
-    "private": false,
-    "authors": [
+  "name": "iron-grid",
+  "version": "4.0.0",
+  "description": "Responsive Grid System for Polymer",
+  "private": false,
+  "authors": [
     "The5heepDevelopment"
   ],
-    "keywords": [
+  "keywords": [
     "web-components",
     "web-component",
     "polymer",
     "grid",
     "layout"
   ],
-    "main": [
+  "main": [
     "iron-grid.html"
   ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/The5heepDev/iron-grid"
-    },
-    "dependencies": {
-        "polymer": "Polymer/polymer#^2.0.0",
-        "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^2.0.1"
-    },
-    "devDependencies": {
-        "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
-        "web-component-tester": "*",
-        "webcomponentsjs": "webcomponents/webcomponentsjs#^v1.0.2"
-    }
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/The5heepDev/iron-grid"
+  },
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "resize-observer-polyfill": "^1.5.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^3.0.1"
+  },
+  "resolutions": {
+    "iron-doc-viewer": "^3.0.5"
+  }
 }

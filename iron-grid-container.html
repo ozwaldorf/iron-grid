@@ -1,0 +1,47 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<!--
+# Iron Container
+
+`iron-container` is not strictly part of iron-grid but is important in laying out content. It allows you to center your page content. `iron-container`'s default is set to ~90% of the window width. It helps you center and contain your page content. We use the container to contain our body content.
+
+### Styling
+
+The following custom proporties are available for styling:
+
+Custom property | Description | Default
+-|-|-
+`--iron-container-width`|Width of the Container|`90%`
+@demo demo/index.html
+-->
+<script>
+    (() => {
+        class IronGridContainer extends Polymer.Element{
+            constructor() {
+                super();
+            }
+            static get style() {
+                return `
+                .iron-container {
+                    padding: 0 1.5 rem;
+                    margin: 0 auto;
+                    max-width: var(--iron-container-max-width, 1280px);
+                    width: var(--iron-container-width, 90%);
+                }
+
+                .iron-container::slotted(iron-grid) {
+                    margin-left: -0.75rem;
+                    margin-right: -0.75rem;
+                }`;
+            }
+
+            static get template() {
+                return `
+                    <style>${this.style}</style>
+                    <div class="iron-container">
+                        <slot></slot>
+                    </div>`;
+            }
+        }
+        customElements.define('iron-grid-container', IronGridContainer);
+    })();
+</script>
