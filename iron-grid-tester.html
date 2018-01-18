@@ -1,4 +1,4 @@
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="iron-grid.html">
 
 <dom-module id="iron-grid-tester">
@@ -169,6 +169,9 @@
     <script>
 		class IronGridTester extends
 		Polymer.Element {
+            constructor() {
+                super();
+            }
 			static get
 			is() {
 				return 'iron-grid-tester'

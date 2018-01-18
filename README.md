@@ -1,6 +1,25 @@
 #Demo
 [Plunker](https://plnkr.co/edit/O3fP71Yc2uMApv5aGot6)
 
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-grid.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<iron-grid>
+    <div class="xs12 s9 m6 l3 xl3"></div>
+    <div class="xs12 s9 m6 l3 xl3"></div>
+    <div class="xs12 s9 m6 l3 xl3"></div>
+    <div class="xs12 s9 m6 l3 xl3"></div>
+</iron-grid>
+```
+
 # Iron Container
 
 `iron-container` is not strictly part of iron-grid but is important in laying out content. It allows you to center your page content. `iron-container`'s default is set to ~90% of the window width. It helps you center and contain your page content. We use the container to contain our body content.

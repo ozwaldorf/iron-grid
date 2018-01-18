@@ -1,7 +1,6 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-media-query/iron-media-query.html">
-<link rel="import" href="../iron-resizable-behavior/iron-resizable-behavior.html">
+<link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../polymer/lib/utils/flattened-nodes-observer.html">
+<script src="../resize-observer-polyfill/dist/ResizeObserver.js"></script>
 
 <!--
 # Iron Container
@@ -169,272 +168,233 @@ It is recomended to only apply logging on iron-grid one at a time. If not, you w
 
 @group Iron Element
 
-@element iron-grid
+@customElement iron-grid
+@polymer
 @demo demo/index.html
 @homepage http://the5heep.tk/
 -->
-<dom-module id="iron-grid">
-    <template>
-        <style>
-			:host {
-
-				width: 100%;
-				display: flex;
-				flex-wrap: wrap;
+<script>
+	(() => {
+		'use strict';
+		class IronGrid extends Polymer.Element {
+			constructor() {
+				super();
 			}
 
-			:host:after {
-				content: "";
-				display: table;
-				clear: both;
-			}
-
-        </style>
-
-        <slot id="slot"></slot>
-    </template>
-
-    <script>
-		(function() {
-			'use strict';
-
-			Polymer({
-				is:'iron-grid',
-
-				behaviors:[Polymer.IronResizableBehavior],
-
-				listeners: {
-					'iron-resize':'onResize'
-				},
-
-				properties: {
+			static get properties() {
+				return {
 					log: {
-						type:Boolean,
-						value:false
+						type: Boolean,
+						value: false
 					},
 
 					xsMaxWidth: {
-						type:Number,
-						value:480,
-						reflectToAttribute:true
+						type: Number,
+						value: 480,
+						reflectToAttribute: true
 					},
 
 					sMaxWidth: {
-						type:Number,
-						value:960,
-						reflectToAttribute:true
+						type: Number,
+						value: 960,
+						reflectToAttribute: true
 					},
 
 					mMaxWidth: {
-						type:Number,
-						value:1280,
-						reflectToAttribute:true
+						type: Number,
+						value: 1280,
+						reflectToAttribute: true
 					},
 
 					lMaxWidth: {
-						type:Number,
-						value:1600,
-						reflectToAttribute:true
+						type: Number,
+						value: 1600,
+						reflectToAttribute: true
 					},
 
 					ratios: {
-						type:Array,
-						value: function() {
+						type: Array,
+						value: function () {
 							return [0, 8.33333, 16.66667, 25, 33.33333, 41.66667, 50, 58.33333, 66.66667, 75, 83.33333, 91.66667, 100];
 						}
 					},
 
 					screenFormats: {
-						type:Array,
-						value: function() {
+						type: Array,
+						value: function () {
 							return ["xs", "s", "m", "l", "xl"];
 						}
 					},
 
 					sizes: {
-						type:Array,
-						value: function() {
+						type: Array,
+						value: function () {
 							return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 						}
 					},
 
 					prefixs: {
-						type:Array,
-						value: function() {
+						type: Array,
+						value: function () {
 							return ["", "offset-", "order-"];
 						}
 					},
 
 					currentScreenformat: {
-						type:String,
-						notify:true
+						type: String,
+						notify: true
 					},
 
 					ironGridDefaultStyle: {
 
-						type:String,
-						value:"margin-left: 0;order: 6;display : flex;flex-wrap: wrap;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;"
-					},
-				},
-
-				constructClass: function(screen, size, prefix, suffix) {
-					return prefix+screen+size+suffix;
-				},
-
-				onResize: function(event) {
-
-					var newWidth=this.offsetWidth;
-
-					if (newWidth==0) {
-						newWidth=this.parentNode.clientWidth;
+						type: String,
+						value: "margin-left: 0;order: 6;display : flex;flex-wrap: wrap;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;"
 					}
+				}
+			}
 
-					var screenFormat=this.getScreenFormat(newWidth);
+			static get template() {
+				return `
+					<style>
+						:host {
 
-					if (screenFormat!==this.currentScreenformat) {
-						var oldScreenformat=this.currentScreenformat;
-						this.currentScreenformat=screenFormat;
-
-						var d;
-						var time1;
-						if (this.log) {
-							console.log('width : '+newWidth);
-							console.log("screenFormat = "+screenFormat);
-
-							d=new Date();
-							var time1=d.getTime();
-
+							width: 100%;
+							display: flex;
+							flex-wrap: wrap;
 						}
 
-						var screenFormatsSorted=this.screenFormats.slice();
-						screenFormatsSorted.splice(this.screenFormats.indexOf(this.currentScreenformat), 1);
-						screenFormatsSorted.push(this.currentScreenformat);
+						:host:after {
+							content: "";
+							display: table;
+							clear: both;
+						}
+					</style>
 
-						for (var i=0; i<screenFormatsSorted.length; i++) {
-							var format=screenFormatsSorted[i];
+					<slot id="slot"></slot>`;
+			}
 
-							var importantSuffix="";
+			ready() {
+				super.ready();
+				this.onResize();
+			}
 
-							if (format==screenFormat) {
+			connectedCallback() {
+				super.connectedCallback();
+				const resizeObserver = new ResizeObserver(this.onResize.bind(this));
+				resizeObserver.observe(this);
+			}
 
-								importantSuffix=" !important";
-							}
-							for (var j=0; j<this.sizes.length; j++) {
-								var size=this.sizes[j];
+			constructClass(screen, size, prefix, suffix) {
+				return prefix + screen + size + suffix;
+			}
 
-								for (var k=0; k<this.prefixs.length; k++) {
-									var prefix=this.prefixs[k];
+			onResize() {
+				var newWidth = this.offsetWidth;
 
-									var myClass=this.constructClass(format, size, prefix, "");
-									var selector="."+myClass;
+				if (newWidth == 0) {
+					newWidth = this.parentNode.clientWidth;
+				}
 
-									// console.log(selector);
+				var screenFormat = this.getScreenFormat(newWidth);
 
-									var elements=this.querySelectorAll(selector);
+				if (screenFormat !== this.currentScreenformat) {
+					var oldScreenformat = this.currentScreenformat;
+					this.currentScreenformat = screenFormat;
 
-									// console.log(elements);
-									//
-									for (var l=0; l<elements.length; l++) {
+					var d;
+					var time1;
+					if (this.log) {
+						console.log('width : ' + newWidth);
+						console.log("screenFormat = " + screenFormat);
 
-										// console.log(elements[l]);
+						d = new Date();
+						var time1 = d.getTime();
 
-										var style;
+					}
 
-										if (prefix=="") {
+					var screenFormatsSorted = this.screenFormats.slice();
+					screenFormatsSorted.splice(this.screenFormats.indexOf(this.currentScreenformat), 1);
+					screenFormatsSorted.push(this.currentScreenformat);
 
-											style=this.ironGridDefaultStyle;
+					for (var i = 0; i < screenFormatsSorted.length; i++) {
+						var format = screenFormatsSorted[i];
 
-											if (this.ratios[j]!=0) {
-												style=style+"width:"+this.ratios[j]+"%"+importantSuffix+";";
-											} else {
+						var importantSuffix = "";
 
-												style=style+"display:none"+importantSuffix+";";
-											}
+						if (format == screenFormat) {
 
-										} else if (prefix=="offset-") {
+							importantSuffix = " !important";
+						}
+						for (var j = 0; j < this.sizes.length; j++) {
+							var size = this.sizes[j];
 
-											style=elements[l].style.cssText+"margin-left:"+this.ratios[j]+"%"+importantSuffix+";";
+							for (var k = 0; k < this.prefixs.length; k++) {
+								var prefix = this.prefixs[k];
 
-										} else if (prefix=="order-") {
+								var myClass = this.constructClass(format, size, prefix, "");
+								var selector = "." + myClass;
 
-											style=elements[l].style.cssText+"order:"+j+importantSuffix+";";
+								var elements = this.querySelectorAll(selector);
 
+								for (var l = 0; l < elements.length; l++) {
+
+									var style;
+
+									if (prefix == "") {
+
+										style = this.ironGridDefaultStyle;
+
+										if (this.ratios[j] != 0) {
+											style = style + "width:" + this.ratios[j] + "%" + importantSuffix + ";";
+										} else {
+
+											style = style + "display:none" + importantSuffix + ";";
 										}
 
-										elements[l].style.cssText=style;
+									} else if (prefix == "offset-") {
+
+										style = elements[l].style.cssText + "margin-left:" + this.ratios[j] + "%" + importantSuffix + ";";
+
+									} else if (prefix == "order-") {
+
+										style = elements[l].style.cssText + "order:" + j + importantSuffix + ";";
 
 									}
 
+									elements[l].setAttribute('style', style);
+
 								}
+
 							}
 						}
-
-						if (this.log) {
-							d=new Date();
-							var time2=d.getTime();
-
-							var totalTime=time2-time1;
-
-							console.log("Time to apply responsiveness = "+totalTime+"ms");
-						}
-
 					}
-				},
 
-				getScreenFormat: function(newWidth) {
-					if (newWidth<=this.xsMaxWidth) {
-						return "xs";
-					} else if (newWidth<=this.sMaxWidth) {
-						return "s";
-					} else if (newWidth<=this.mMaxWidth) {
-						return "m";
-					} else if (newWidth<=this.lMaxWidth) {
-						return "l";
-					} else {
-						return "xl";
+					if (this.log) {
+						d = new Date();
+						var time2 = d.getTime();
+
+						var totalTime = time2 - time1;
+
+						console.log("Time to apply responsiveness = " + totalTime + "ms");
 					}
+
 				}
-			});
-		})();
-    </script>
-</dom-module>
-
-<!--
-# Iron Container
-
-`iron-container` is not strictly part of iron-grid but is important in laying out content. It allows you to center your page content. `iron-container`'s default is set to ~90% of the window width. It helps you center and contain your page content. We use the container to contain our body content.
-
-### Styling
-
-The following custom proporties are available for styling:
-
-Custom property | Description | Default
--|-|-
-`--iron-container-width`|Width of the Container|`90%`
--->
-<dom-module id="iron-grid-container">
-    <template>
-        <style>
-			.iron-container {
-				padding: 0 1.5 rem;
-				margin: 0 auto;
-				max-width: var(--iron-container-max-width, 1280px);
-				width: var(--iron-container-width, 90%);
 			}
 
-			.iron-container::slotted(iron-grid) {
-			margin-left: -0.75rem;
-			margin-right: -0.75rem;
+			getScreenFormat(newWidth) {
+				if (newWidth <= this.xsMaxWidth) {
+					return "xs";
+				} else if (newWidth <= this.sMaxWidth) {
+					return "s";
+				} else if (newWidth <= this.mMaxWidth) {
+					return "m";
+				} else if (newWidth <= this.lMaxWidth) {
+					return "l";
+				} else {
+					return "xl";
+				}
 			}
-        </style>
-
-        <div class="iron-container">
-            <slot></slot>
-        </div>
-    </template>
-    <script>
-		Polymer({
-			is:'iron-grid-container'
-		});
-    </script>
-</dom-module>
+		}
+		customElements.define('iron-grid', IronGrid);
+	})();
+</script>
